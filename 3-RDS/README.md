@@ -1,5 +1,3 @@
-<!-- BEGIN_TF_DOCS -->
-<!-- END_TF_DOCS -->
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
 

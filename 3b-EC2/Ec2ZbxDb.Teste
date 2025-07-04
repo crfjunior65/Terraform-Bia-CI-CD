@@ -50,7 +50,7 @@ resource "aws_instance" "ec2_zabbix_install" {
   /*
 provisioner "remote-exec" {
     inline = [
-      # Mounting Efs 
+      # Mounting Efs
       #"sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport ${aws_efs_file_system.efs.dns_name}:/  /var/www/html",
       "sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport ${data.terraform_remote_state.EFS.efs_fs_dns}:/  /home/ec2-user/GLPI",
       "sleep 15",
@@ -76,7 +76,7 @@ provisioner "remote-exec" {
   #"${aws_security_group.acesso-http.id}", "${aws_security_group.acesso-rds.id}"]
 
   provisioner "remote-exec" {
-    #depends_on = 
+    #depends_on =
     connection {
       type        = "ssh"
       user        = "ubuntu"

@@ -7,4 +7,3 @@ repos:
       - id: terraform_docs         # Gera/atualiza a documentação
         args: ["--args=--output-file README.md --output-mode inject"]
         args: ["--args=--lockfile=false"]  # Opcional: evita criar arquivo .terraform.lock.hcl
-

@@ -88,7 +88,7 @@ resource "aws_ecs_task_definition" "ecs_task_definition" {
   #execution_role_arn = "arn:aws:iam::684644783255:role/ecsTaskExecutionRole"
   #task_role_arn = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
   #execution_role_arn = data.terraform_remote_state.iam.outputs.iam_ecs_task_execution_role.arn
-  cpu    = 1024 # equivale a 1 vCPU - QUANTIDADE DE CPU A SER ALOCADA PARA A ECS 
+  cpu    = 1024 # equivale a 1 vCPU - QUANTIDADE DE CPU A SER ALOCADA PARA A ECS
   memory = 256  # 256 MiB = 0.25 GiB
   #task_role_arn = data.terraform_remote_state.iam.outputs.iam_ecs_task_role.id
   runtime_platform {
@@ -99,7 +99,7 @@ resource "aws_ecs_task_definition" "ecs_task_definition" {
   container_definitions = jsonencode([{
     name      = "webapp-ctr",
     image     = "023770199924.dkr.ecr.us-east-1.amazonaws.com/bia:latest", # image URL of the application image
-    cpu       = 1024,                                                      # equivale a 1 vCPU - QUANTIDADE DE CPU A SER ALOCADA PARA A ECS 
+    cpu       = 1024,                                                      # equivale a 1 vCPU - QUANTIDADE DE CPU A SER ALOCADA PARA A ECS
     memory    = 256,                                                       # 256 MiB = 0.25 GiB
     essencial = true,                                                      # a execução do container é essencial para a tarefa
     portMappings = [{

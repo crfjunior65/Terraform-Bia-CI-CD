@@ -69,6 +69,11 @@ No modules.
 | <a name="output_ami_ubuntu_2204"></a> [ami\_ubuntu\_2204](#output\_ami\_ubuntu\_2204) | n/a |
 | <a name="output_ami_win2022"></a> [ami\_win2022](#output\_ami\_win2022) | AMI do Windows Server 2022 |
 | <a name="output_autor"></a> [autor](#output\_autor) | Autor de edição. |
+| <a name="output_bastion_instance_id"></a> [bastion\_instance\_id](#output\_bastion\_instance\_id) | The instance ID of the bastion host. |
+| <a name="output_bastion_key_name"></a> [bastion\_key\_name](#output\_bastion\_key\_name) | The key name associated with the bastion host. |
+| <a name="output_bastion_private_ip"></a> [bastion\_private\_ip](#output\_bastion\_private\_ip) | The private IP address of the bastion host. |
+| <a name="output_bastion_public_ip"></a> [bastion\_public\_ip](#output\_bastion\_public\_ip) | The public IP address of the bastion host. |
+| <a name="output_bastion_sg_ids"></a> [bastion\_sg\_ids](#output\_bastion\_sg\_ids) | The security group IDs associated with the bastion host. |
 | <a name="output_cliente"></a> [cliente](#output\_cliente) | Cliente do projeto. |
 | <a name="output_id_instancia"></a> [id\_instancia](#output\_id\_instancia) | n/a |
 | <a name="output_key_name"></a> [key\_name](#output\_key\_name) | Nome da chave SSH para acesso às instâncias. |

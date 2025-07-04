@@ -50,7 +50,7 @@ resource "aws_instance" "ec2_bia_dev" {
   /*
   provisioner "remote-exec" {
     inline = [
-      # Mounting Efs 
+      # Mounting Efs
       #"sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport ${aws_efs_file_system.efs.dns_name}:/  /var/www/html",
       "sudo mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport ${data.terraform_remote_state.EFS.efs_fs_dns}:/  /home/ec2-user/GLPI",
       "sleep 15",
@@ -77,7 +77,7 @@ resource "aws_instance" "ec2_bia_dev" {
   vpc_security_group_ids = ["${data.terraform_remote_state.sg.outputs.sg_bia_dev}"]
 
   provisioner "remote-exec" {
-    #depends_on = 
+    #depends_on =
     connection {
       type        = "ssh"
       user        = "ec2-user"
@@ -108,18 +108,18 @@ resource "aws_instance" "ec2_bia_dev" {
       DB_HOST: ${data.terraform_remote_state.rds.outputs.db_db_address}
       DB_PORT: 5432
       ## NAO PRECISA NO BOOTCAMP DAQUI PRA BAIXO ##
-      # DB_SECRET_NAME: 
-      # DB_REGION: 
-      # AWS_ACCESS_KEY_ID: 
+      # DB_SECRET_NAME:
+      # DB_REGION:
+      # AWS_ACCESS_KEY_ID:
       # AWS_SECRET_ACCESS_KEY:
-      # DEBUG_SECRET: 
-      # IS_LOCAL: true 
+      # DEBUG_SECRET:
+      # IS_LOCAL: true
     # healthcheck:
     #   test: ["CMD", "curl", "-f", "http://localhost:8080/api/versao"]
     #   interval: 10s
     #   timeout: 5s
     #   retries: 3
-    #   start_period: 5s     
+    #   start_period: 5s
   database:
     image: postgres:16.1
     container_name: database
@@ -142,9 +142,9 @@ volumes:
       #"cp scripts/ecs/unix/*.sh .",
       #"chmod +x *.sh"
       #  vi Dockerfile
-      #6  vi docker-compose.yml 
+      #6  vi docker-compose.yml
       #7  docker compose up -d
-      #8  cat README.md 
+      #8  cat README.md
       #9  docker compose exec server bash -c 'npx sequelize db:migrate'
 
     ]
@@ -168,7 +168,7 @@ provisioner "file" {
 
 
   provisioner "remote-exec" {
-    #depends_on = 
+    #depends_on =
     connection {
       type        = "ssh"
       user        = "ec2-user"
@@ -198,9 +198,9 @@ Acoes Banco de Dados
     3  chmod +x *.sh
     4  ls -lha
     5  vi Dockerfile
-    6  vi docker-compose.yml 
+    6  vi docker-compose.yml
     7  docker compose up -d
-    8  cat README.md 
+    8  cat README.md
     9  docker compose exec server bash -c 'npx sequelize db:migrate'
    10  history
 
@@ -208,7 +208,7 @@ Acoes Banco de Dados
 
  4  cd bia
     5  ls -lha
-    6  cat rodar_app_local_unix.sh 
+    6  cat rodar_app_local_unix.sh
     7  docker compose up -d
     8  docker-compose up -d
     9  vi Dockerfile
@@ -216,7 +216,7 @@ Acoes Banco de Dados
    11  docker-compose build server
    12  docker-compose up -d
    13  docker-compose down -v
-   14  cat README.md 
+   14  cat README.md
    15  docker-compose up -d
    16  docker compose exec server bash -c 'npx sequelize db:migrate'
    17  docker-compose exec server bash -c 'npx sequelize db:migrate'
@@ -232,41 +232,41 @@ Acoes Banco de Dados
    27  vi Dockerfile
    28  docker-compose build server
    29  docker-compose up -d
-   30  history 
+   30  history
 
    /home/junior/Dados/FormacaoAWS/Terraform/3a-Orquestrador
 ╷
 │ Error: Reference to undeclared resource
-│ 
+│
 │   on Ec2.tf line 77, in resource "aws_instance" "ec2_bia_dev":
 │   77:   vpc_security_group_ids = ["${aws_security_group.sg_bia_dev.id}"]
-│ 
+│
 │ A managed resource "aws_security_group" "sg_bia_dev" has not been declared in the root module.
 ╵
 ╷
 │ Error: Reference to undeclared resource
-│ 
+│
 │   on Ec2.tf line 77, in resource "aws_instance" "ec2_bia_dev":
 │   77:   vpc_security_group_ids = ["${aws_security_group.sg_bia_dev.id}"]
-│ 
+│
 │ A managed resource "aws_security_group" "sg_bia_dev" has not been declared in the root module.
 ╵
 ./UP.sh: linha 91: cd: 5-ECR: Arquivo ou diretório inexistente
 /home/junior/Dados/FormacaoAWS/Terraform/3a-Orquestrador
 ╷
 │ Error: Reference to undeclared resource
-│ 
+│
 │   on Ec2.tf line 77, in resource "aws_instance" "ec2_bia_dev":
 │   77:   vpc_security_group_ids = ["${aws_security_group.sg_bia_dev.id}"]
-│ 
+│
 │ A managed resource "aws_security_group" "sg_bia_dev" has not been declared in the root module.
 ╵
 ╷
 │ Error: Reference to undeclared resource
-│ 
+│
 │   on Ec2.tf line 77, in resource "aws_instance" "ec2_bia_dev":
 │   77:   vpc_security_group_ids = ["${aws_security_group.sg_bia_dev.id}"]
-│ 
+│
 │ A managed resource "aws_security_group" "sg_bia_dev" has not been declared in the root module.
 ╵
 

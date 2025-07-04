@@ -10,7 +10,7 @@ provider "aws" {
   default_tags {
     tags = {
       Terraform    = "true"
-      Environment  = "Projeto"
+      Environment  = "Projeto-Bia"
       Management   = "Terraform"
       RegiaoCriada = "us-east-1"
     }

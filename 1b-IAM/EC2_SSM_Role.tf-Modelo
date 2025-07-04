@@ -117,7 +117,7 @@ resource "aws_iam_instance_profile" "ec2_unified_profile" {
 resource "aws_iam_role_policy" "custom_unified_policy" {
   name   = "Custom-Unified-Policy"
   role   = aws_iam_role.ec2_unified_role.id
-  
+
   policy = jsonencode({
     Version   = "2012-10-17"
     Statement = [

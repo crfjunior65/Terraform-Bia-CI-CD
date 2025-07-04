@@ -63,11 +63,11 @@ resource "aws_dynamodb_table" "terraform_locks" {
 
 /*
 │ Error: reading S3 Bucket (crfjunior-terraform-state-zabbix): operation error S3: HeadBucket, https response error StatusCode: 403, RequestID: DRBFRV1RPJTNS0JC, HostID: W/UG4JRCmt8niibEDSWTyUnqHbnySpZH+RPDH3ccXH4tJliqXO4ehqsAeHHZa6i9tSVwcszcto4=, api error Forbidden: Forbidden
-│ 
+│
 │   with aws_s3_bucket.s3_state,
 │   on State.tf line 19, in resource "aws_s3_bucket" "s3_state":
 │   19: resource "aws_s3_bucket" "s3_state" {
-│ 
+│
 
 
 resource "aws_s3_bucket" "s3_state" {

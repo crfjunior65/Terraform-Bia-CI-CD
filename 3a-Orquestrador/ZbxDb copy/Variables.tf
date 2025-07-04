@@ -110,7 +110,7 @@ variable "shortnameid" {
       ZABBIX_DB_USER="zabbix"
       ZABBIX_DB_PASS="zabbix123456"
       ZABBIX_DB_NAME="zabbixdb"
- 
+
 
 #ZABBIX_DB_SERVER
 variable "zabbix_db_server" {

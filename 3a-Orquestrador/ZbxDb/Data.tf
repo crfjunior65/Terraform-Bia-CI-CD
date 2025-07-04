@@ -130,6 +130,6 @@ data "template_file" "install_zabbix_server" {
 │  120:     ZABBIX_DB_SERVER = data.terraform_remote_state.rds.outputs.db_db_address #aws_db_instance.banco_zabbix.address
 │     ├────────────────
 │     │ data.terraform_remote_state.rds.outputs is object with no attributes
-│ 
+│
 │ This object does not have an attribute named "db_db_address".
 */

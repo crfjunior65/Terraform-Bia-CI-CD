@@ -209,9 +209,9 @@ resource "aws_iam_instance_profile" "ssm_profile" {
 resource "aws_instance" "ec2" {
   ami           = "ami-xxxxxxxxxxxxx"  # Substitua pela AMI correta
   instance_type = "t2.micro"
-  
+
   iam_instance_profile = aws_iam_instance_profile.ssm_profile.name
-  
+
   tags = {
     Name = "EC2-SSM-Instance"
   }

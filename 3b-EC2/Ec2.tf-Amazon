@@ -21,7 +21,7 @@ resource "aws_instance" "ec2_orquestrador" {
 
   #iam_instance_profile        = data.terraform_remote_state.vpc.outputs.iam_ssm_profile
   #aws_iam_instance_profile.ecs_node.id
-  
+
   #Definir Volume
 
   #####user_data = file("InstallTerrafor.sh")
@@ -49,8 +49,8 @@ resource "aws_instance" "ec2_orquestrador" {
     Management  = "Terraform"
   }
   vpc_security_group_ids = ["${data.terraform_remote_state.vpc.outputs.sg_ssh_id}",
-  "${data.terraform_remote_state.vpc.outputs.sg_http_id}", 
-  "${data.terraform_remote_state.vpc.outputs.sg_rds_id}", 
+  "${data.terraform_remote_state.vpc.outputs.sg_http_id}",
+  "${data.terraform_remote_state.vpc.outputs.sg_rds_id}",
   "${data.terraform_remote_state.vpc.outputs.sg_efs_id}"]
   #vpc_security_group_ids = ["${aws_security_group.acesso-ssh.id}",
   #"${aws_security_group.acesso-http.id}", "${aws_security_group.acesso-rds.id}"]

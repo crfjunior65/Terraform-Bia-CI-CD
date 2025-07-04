@@ -37,7 +37,7 @@ data "aws_ami" "amazon_linux2" {
     name   = "name"
     values = ["amzn2-ami-hvm-*-x86_64-gp2"]
     #al2023-ami-2023.7.20250414.0-kernel-6.1-x86_64
-    #"amzn2-ami-hvm-*-x86_64-gp2"] 
+    #"amzn2-ami-hvm-*-x86_64-gp2"]
     #Amazon Linux 2 Kernel 5.10 AMI 2.0.20250414.0 x86_64 HVM gp2
   }
 

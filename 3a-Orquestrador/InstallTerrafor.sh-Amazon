@@ -1,7 +1,7 @@
-#! /bin/bash 
+#! /bin/bash
 echo "Executamos USER DATA" >/home/ec2-user/Install/UserData
 
-# Instalacao Terrafor 
+# Instalacao Terrafor
 echo "# Instalacao Terraform, Iniciada..." >>/home/ec2-user/AndamentoUserData.Terraform
 mkdir /home/ec2-user/Install
 # mkdir /home/ec2-user/IaC
@@ -46,7 +46,7 @@ usermod -a -G docker ec2-user
 newgrp docker
 #yum install python3-pip -y
 #pip3 install docker-compose
-wget https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m) 
+wget https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)
 mv docker-compose-$(uname -s)-$(uname -m) /usr/local/bin/docker-compose
 chmod -v +x /usr/local/bin/docker-compose
 
@@ -107,7 +107,7 @@ echo "---------------------------------" >>/home/ec2-user/AndamentoUserData.Terr
 #https://github.com/aws/efs-utils?tab=readme-ov-file#on-other-linux-distributions
 yum update -y
 yum install nfs-common -y
-yum -y install binutils 
+yum -y install binutils
 #rustc cargo pkg-config libssl-dev
 yum install -y amazon-efs-utils
 

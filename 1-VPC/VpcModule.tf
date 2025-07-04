@@ -11,7 +11,7 @@ module "vpc" {
 
   /*
   providers = {
-    aws = aws.us-1 
+    aws = aws.us-1
   }
 */
 
@@ -57,6 +57,3 @@ module "vpc" {
     Management  = "Terraform"
   }
 }
-
-
-

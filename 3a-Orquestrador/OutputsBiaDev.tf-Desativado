@@ -97,4 +97,3 @@ output "ami_linux_amz_2023" {
   description = "AMI do Amazom Linux 2023."
   value       = data.aws_ami.amazon_linux_2023.id
 }
-

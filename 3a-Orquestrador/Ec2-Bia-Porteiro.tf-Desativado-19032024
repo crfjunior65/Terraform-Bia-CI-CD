@@ -120,9 +120,9 @@ Acoes Banco de Dados
     3  chmod +x *.sh
     4  ls -lha
     5  vi Dockerfile
-    6  vi docker-compose.yml 
+    6  vi docker-compose.yml
     7  docker compose up -d
-    8  cat README.md 
+    8  cat README.md
     9  docker compose exec server bash -c 'npx sequelize db:migrate'
    10  history
 
@@ -130,7 +130,7 @@ Acoes Banco de Dados
 
  4  cd bia
     5  ls -lha
-    6  cat rodar_app_local_unix.sh 
+    6  cat rodar_app_local_unix.sh
     7  docker compose up -d
     8  docker-compose up -d
     9  vi Dockerfile
@@ -138,7 +138,7 @@ Acoes Banco de Dados
    11  docker-compose build server
    12  docker-compose up -d
    13  docker-compose down -v
-   14  cat README.md 
+   14  cat README.md
    15  docker-compose up -d
    16  docker compose exec server bash -c 'npx sequelize db:migrate'
    17  docker-compose exec server bash -c 'npx sequelize db:migrate'
@@ -154,41 +154,41 @@ Acoes Banco de Dados
    27  vi Dockerfile
    28  docker-compose build server
    29  docker-compose up -d
-   30  history 
+   30  history
 
    /home/junior/Dados/FormacaoAWS/Terraform/3a-Orquestrador
 ╷
 │ Error: Reference to undeclared resource
-│ 
+│
 │   on Ec2.tf line 77, in resource "aws_instance" "ec2_bia_dev":
 │   77:   vpc_security_group_ids = ["${aws_security_group.sg_bia_dev.id}"]
-│ 
+│
 │ A managed resource "aws_security_group" "sg_bia_dev" has not been declared in the root module.
 ╵
 ╷
 │ Error: Reference to undeclared resource
-│ 
+│
 │   on Ec2.tf line 77, in resource "aws_instance" "ec2_bia_dev":
 │   77:   vpc_security_group_ids = ["${aws_security_group.sg_bia_dev.id}"]
-│ 
+│
 │ A managed resource "aws_security_group" "sg_bia_dev" has not been declared in the root module.
 ╵
 ./UP.sh: linha 91: cd: 5-ECR: Arquivo ou diretório inexistente
 /home/junior/Dados/FormacaoAWS/Terraform/3a-Orquestrador
 ╷
 │ Error: Reference to undeclared resource
-│ 
+│
 │   on Ec2.tf line 77, in resource "aws_instance" "ec2_bia_dev":
 │   77:   vpc_security_group_ids = ["${aws_security_group.sg_bia_dev.id}"]
-│ 
+│
 │ A managed resource "aws_security_group" "sg_bia_dev" has not been declared in the root module.
 ╵
 ╷
 │ Error: Reference to undeclared resource
-│ 
+│
 │   on Ec2.tf line 77, in resource "aws_instance" "ec2_bia_dev":
 │   77:   vpc_security_group_ids = ["${aws_security_group.sg_bia_dev.id}"]
-│ 
+│
 │ A managed resource "aws_security_group" "sg_bia_dev" has not been declared in the root module.
 ╵
 

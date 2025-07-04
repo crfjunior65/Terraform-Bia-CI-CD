@@ -55,6 +55,3 @@ module "vpc_sa" {
     Management  = "Terraform"
   }
 }
-
-
-

@@ -339,36 +339,36 @@ aws_instance.ec2_bia_porteiro: Still creating... [3m10s elapsed]
 aws_instance.ec2_bia_porteiro: Still creating... [3m20s elapsed]
 aws_instance.ec2_bia_porteiro: Still creating... [3m30s elapsed]
 aws_instance.ec2_bia_porteiro (remote-exec): Informação substituída com sucesso no arquivo de destino.
-[+] Running 13/15bia_porteiro (remote-exec): 
-[+] Running 13/15bia_porteiro (remote-exec):  ⠏ database 14 layers [⣿⣿⣿⣿⣿⣿⣿⣿⣤⣿⣿⣿⣿⣿] 64.79MB/108.6MB Pulling 2.0s 
-[+] Running 14/15bia_porteiro (remote-exec):  ⠴ database 14 layers [⣿⣿⣿⣿⣿⣿⣿⣿⣶⣿⣿⣿⣿⣿] 94.53MB/108.6MB Pulling 2.6s 
-[+] Running 14/15bia_porteiro (remote-exec):  ⠏ database 14 layers [⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿]      0B/0B      Pulling 4.0s 
-[+] Running 14/15bia_porteiro (remote-exec):  ⠋ database 14 layers [⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿]      0B/0B      Pulling 5.1s 
-[+] Running 14/15bia_porteiro (remote-exec):  ⠙ database 14 layers [⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿]      0B/0B      Pulling 6.2s 
-[+] Running 14/15bia_porteiro (remote-exec):  ⠸ database 14 layers [⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿]      0B/0B      Pulling 6.4s 
-[+] Running 14/15bia_porteiro (remote-exec):  ⠴ database 14 layers [⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿]      0B/0B      Pulling 6.6s 
-[+] Running 14/15bia_porteiro (remote-exec):  ⠋ database 14 layers [⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿]      0B/0B      Pulling 9.1s 
-[+] Running 14/15bia_porteiro (remote-exec):  ⠹ database 14 layers [⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿]      0B/0B      Pulling 9.3s 
-[+] Running 15/15bia_porteiro (remote-exec):  ⠇ database 14 layers [⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿]      0B/0B      Pulling 9.9s 
-aws_instance.ec2_bia_porteiro (remote-exec):  ✔ database 14 layers [⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿]      0B/0B      Pulled 10.8s  
-aws_instance.ec2_bia_porteiro (remote-exec):    ✔ c57ee5000d61 Pull complete    0.6s  B/108.6MB2.4s 
-aws_instance.ec2_bia_porteiro (remote-exec):    ✔ 81b575116500 Pull complete    0.1s  
-aws_instance.ec2_bia_porteiro (remote-exec):    ✔ e12fff61d996 Pull complete    0.2s  
-aws_instance.ec2_bia_porteiro (remote-exec):    ✔ 50a849db7317 Pull complete    0.2s  
-aws_instance.ec2_bia_porteiro (remote-exec):    ✔ 432dd17f42df Pull complete    0.5s  
-aws_instance.ec2_bia_porteiro (remote-exec):    ✔ a1f5bcbba6b6 Pull complete    0.4s  
-aws_instance.ec2_bia_porteiro (remote-exec):    ✔ 6e501216828b Pull complete    0.5s  
-aws_instance.ec2_bia_porteiro (remote-exec):    ✔ ea24c7671c3d Pull complete    0.6s  
-aws_instance.ec2_bia_porteiro (remote-exec):    ✔ b7a5cd7c9b9a Pull complete    2.4s  
-aws_instance.ec2_bia_porteiro (remote-exec):    ✔ db7d78d9f46e Pull complete    0.7s  
-aws_instance.ec2_bia_porteiro (remote-exec):    ✔ 8c786fbf8634 Pull complete    0.7s  
-aws_instance.ec2_bia_porteiro (remote-exec):    ✔ 2831031f2a0e Pull complete    0.8s  
-aws_instance.ec2_bia_porteiro (remote-exec):    ✔ 75c5b068b243 Pull complete    0.8s  
-aws_instance.ec2_bia_porteiro (remote-exec):    ✔ 9590d9e20e85 Pull complete    0.9s  
-aws_instance.ec2_bia_porteiro (remote-exec): 
-[+] Building 0.0s (0/0)  docker:defaultxec): 
-[+] Building 0.0s (0/1)  docker:defaultxec): 
-[+] Building 0.1s (1/2)  docker:defaultxec): 
+[+] Running 13/15bia_porteiro (remote-exec):
+[+] Running 13/15bia_porteiro (remote-exec):  ⠏ database 14 layers [⣿⣿⣿⣿⣿⣿⣿⣿⣤⣿⣿⣿⣿⣿] 64.79MB/108.6MB Pulling 2.0s
+[+] Running 14/15bia_porteiro (remote-exec):  ⠴ database 14 layers [⣿⣿⣿⣿⣿⣿⣿⣿⣶⣿⣿⣿⣿⣿] 94.53MB/108.6MB Pulling 2.6s
+[+] Running 14/15bia_porteiro (remote-exec):  ⠏ database 14 layers [⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿]      0B/0B      Pulling 4.0s
+[+] Running 14/15bia_porteiro (remote-exec):  ⠋ database 14 layers [⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿]      0B/0B      Pulling 5.1s
+[+] Running 14/15bia_porteiro (remote-exec):  ⠙ database 14 layers [⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿]      0B/0B      Pulling 6.2s
+[+] Running 14/15bia_porteiro (remote-exec):  ⠸ database 14 layers [⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿]      0B/0B      Pulling 6.4s
+[+] Running 14/15bia_porteiro (remote-exec):  ⠴ database 14 layers [⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿]      0B/0B      Pulling 6.6s
+[+] Running 14/15bia_porteiro (remote-exec):  ⠋ database 14 layers [⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿]      0B/0B      Pulling 9.1s
+[+] Running 14/15bia_porteiro (remote-exec):  ⠹ database 14 layers [⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿]      0B/0B      Pulling 9.3s
+[+] Running 15/15bia_porteiro (remote-exec):  ⠇ database 14 layers [⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿]      0B/0B      Pulling 9.9s
+aws_instance.ec2_bia_porteiro (remote-exec):  ✔ database 14 layers [⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿]      0B/0B      Pulled 10.8s
+aws_instance.ec2_bia_porteiro (remote-exec):    ✔ c57ee5000d61 Pull complete    0.6s  B/108.6MB2.4s
+aws_instance.ec2_bia_porteiro (remote-exec):    ✔ 81b575116500 Pull complete    0.1s
+aws_instance.ec2_bia_porteiro (remote-exec):    ✔ e12fff61d996 Pull complete    0.2s
+aws_instance.ec2_bia_porteiro (remote-exec):    ✔ 50a849db7317 Pull complete    0.2s
+aws_instance.ec2_bia_porteiro (remote-exec):    ✔ 432dd17f42df Pull complete    0.5s
+aws_instance.ec2_bia_porteiro (remote-exec):    ✔ a1f5bcbba6b6 Pull complete    0.4s
+aws_instance.ec2_bia_porteiro (remote-exec):    ✔ 6e501216828b Pull complete    0.5s
+aws_instance.ec2_bia_porteiro (remote-exec):    ✔ ea24c7671c3d Pull complete    0.6s
+aws_instance.ec2_bia_porteiro (remote-exec):    ✔ b7a5cd7c9b9a Pull complete    2.4s
+aws_instance.ec2_bia_porteiro (remote-exec):    ✔ db7d78d9f46e Pull complete    0.7s
+aws_instance.ec2_bia_porteiro (remote-exec):    ✔ 8c786fbf8634 Pull complete    0.7s
+aws_instance.ec2_bia_porteiro (remote-exec):    ✔ 2831031f2a0e Pull complete    0.8s
+aws_instance.ec2_bia_porteiro (remote-exec):    ✔ 75c5b068b243 Pull complete    0.8s
+aws_instance.ec2_bia_porteiro (remote-exec):    ✔ 9590d9e20e85 Pull complete    0.9s
+aws_instance.ec2_bia_porteiro (remote-exec):
+[+] Building 0.0s (0/0)  docker:defaultxec):
+[+] Building 0.0s (0/1)  docker:defaultxec):
+[+] Building 0.1s (1/2)  docker:defaultxec):
 [+] Building 0.4s (1/2)  docker:defaultxec):  => [server internal] load build   0.1s
 [+] Building 0.7s (3/15)  docker:defaultec):  => [server internal] load build   0.1s
 [+] Building 0.8s (3/15)  docker:defaultec):  => [server internal] load build   0.1s
@@ -1213,16 +1213,16 @@ aws_instance.ec2_bia_porteiro (remote-exec):  => [server] exporting to image   4
 aws_instance.ec2_bia_porteiro (remote-exec):  => => exporting layers           47.5s
 aws_instance.ec2_bia_porteiro (remote-exec):  => => writing image sha256:bc365  0.0s
 aws_instance.ec2_bia_porteiro (remote-exec):  => => naming to docker.io/librar  0.0s
-[+] Running 4/42_bia_porteiro (remote-exec): 
-[+] Running 4/42_bia_porteiro (remote-exec):  ✔ Network bia_default  Created    0.2s 
-[+] Running 4/42_bia_porteiro (remote-exec):  ✔ Network bia_default  Created    0.2s 
-[+] Running 4/42_bia_porteiro (remote-exec):  ✔ Network bia_default  Created    0.2s 
-[+] Running 4/42_bia_porteiro (remote-exec):  ✔ Network bia_default  Created    0.2s 
-aws_instance.ec2_bia_porteiro (remote-exec):  ✔ Network bia_default  Created    0.2s 
-aws_instance.ec2_bia_porteiro (remote-exec):  ✔ Volume "bia_db"      Created    0.0s 
-aws_instance.ec2_bia_porteiro (remote-exec):  ✔ Container database   Started    0.1s 
-aws_instance.ec2_bia_porteiro (remote-exec):  ✔ Container bia        Started    0.1s 
-aws_instance.ec2_bia_porteiro (remote-exec): 
+[+] Running 4/42_bia_porteiro (remote-exec):
+[+] Running 4/42_bia_porteiro (remote-exec):  ✔ Network bia_default  Created    0.2s
+[+] Running 4/42_bia_porteiro (remote-exec):  ✔ Network bia_default  Created    0.2s
+[+] Running 4/42_bia_porteiro (remote-exec):  ✔ Network bia_default  Created    0.2s
+[+] Running 4/42_bia_porteiro (remote-exec):  ✔ Network bia_default  Created    0.2s
+aws_instance.ec2_bia_porteiro (remote-exec):  ✔ Network bia_default  Created    0.2s
+aws_instance.ec2_bia_porteiro (remote-exec):  ✔ Volume "bia_db"      Created    0.0s
+aws_instance.ec2_bia_porteiro (remote-exec):  ✔ Container database   Started    0.1s
+aws_instance.ec2_bia_porteiro (remote-exec):  ✔ Container bia        Started    0.1s
+aws_instance.ec2_bia_porteiro (remote-exec):
 aws_instance.ec2_bia_porteiro: Still creating... [6m30s elapsed]
 aws_instance.ec2_bia_porteiro: Still creating... [6m40s elapsed]
 

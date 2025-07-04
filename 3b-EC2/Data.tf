@@ -87,4 +87,3 @@ data "terraform_remote_state" "rds" {
     region = "us-east-1"
   }
 }
-

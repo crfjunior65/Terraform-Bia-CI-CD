@@ -1,5 +1,5 @@
 #!/bin/bash
-# Instalacao Terrafor 
+# Instalacao Terrafor
 echo "# Instalacao Terraform, Iniciada..." >>/home/ubuntu/AndamentoUserData.Terraform
 sudo mkdir /home/ubuntu/Install
 # mkdir /home/ubuntu/IaC
@@ -52,8 +52,8 @@ sudo apt install awscli -y
 
 # Acesso GIT
 echo "# Instalacao GIT, Iniciada..." >>/home/ubuntu/AndamentoUserData.Terraform
-sudo add-apt-repository ppa:git-core/ppa 
-sudo apt-get update && apt-get -y install git 
+sudo add-apt-repository ppa:git-core/ppa
+sudo apt-get update && apt-get -y install git
 echo "# Instalacao GIT, Terminada" >>/home/ubuntu/AndamentoUserData.Terraform
 echo "---------------------------------" >>/home/ubuntu/AndamentoUserData.Terraform
 

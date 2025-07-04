@@ -1,5 +1,5 @@
 #!/bin/bash
- Instalacao Terrafor 
+ Instalacao Terrafor
 echo "# Instalacao Terraform, Iniciada..." >>/home/ubuntu/AndamentoUserData.Terraform
 sudo mkdir /home/ubuntu/Install
 # mkdir /home/ubuntu/IaC
@@ -49,8 +49,8 @@ echo "---------------------------------" >>/home/ubuntu/AndamentoUserData.Terraf
 
 # Acesso GIT
 echo "# Instalacao GIT, Iniciada..." >>/home/ubuntu/AndamentoUserData.Terraform
-add-apt-repository ppa:git-core/ppa 
-apt-get update && apt-get -y install git 
+add-apt-repository ppa:git-core/ppa
+apt-get update && apt-get -y install git
 echo "# Instalacao GIT, Terminada" >>/home/ubuntu/AndamentoUserData.Terraform
 echo "---------------------------------" >>/home/ubuntu/AndamentoUserData.Terraform
 

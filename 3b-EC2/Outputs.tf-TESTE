@@ -3,7 +3,7 @@
 #}
 
 #output "Srv-5" {
-#  value = aws_instance.app_server6.public_ip 
+#  value = aws_instance.app_server6.public_ip
 #}
 
 #output "vpc_public_subnets" {
@@ -127,5 +127,3 @@ output "ami_amazon" {
 output "ami_amazon_2023" {
   value = data.aws_ami.amazon_linux_2023
 }
-
-
