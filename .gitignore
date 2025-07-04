@@ -64,3 +64,5 @@ Testes
 Testes/
 terragrunt
 terragrunt/
+TesteAWS_CLI
+*AWS_CLI*
