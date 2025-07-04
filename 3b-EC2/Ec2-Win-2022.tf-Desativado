@@ -1,0 +1,63 @@
+# Cria a instância EC2 Windows
+resource "aws_instance" "windows_server" {
+  ami           = data.terraform_remote_state.Orquestrador.outputs.ami_win2022
+  instance_type = "t3.micro" # Tamanho recomendado para Windows
+
+  #key_name                    = data.terraform_remote_state.Orquestrador.outputs.key_name
+  security_groups             = [data.terraform_remote_state.sg.outputs.sg_windows]
+  availability_zone           = data.terraform_remote_state.vpc.outputs.vpc_azs_id[0]
+  subnet_id                   = data.terraform_remote_state.vpc.outputs.vpc_public_subnets_id[0]
+  associate_public_ip_address = true
+
+  # Tamanho do disco root (em GB)
+  root_block_device {
+    volume_size = 50
+    volume_type = "gp3"
+  }
+
+  # Tags para identificação
+  tags = {
+    Name = "EC2-Windows-Server-2022"
+    OS   = "Windows"
+  }
+
+  # Script de user data (opcional)
+  user_data = <<-EOF
+              <powershell>
+              # Comandos PowerShell para configuração inicial
+              Set-TimeZone -Id "E. South America Standard Time"
+              Install-WindowsFeature -Name Web-Server -IncludeManagementTools
+              # Define a senha do administrador
+$adminPassword = ConvertTo-SecureString "SuaSenhaSegura123!" -AsPlainText -Force
+Set-LocalUser -Name "Administrator" -Password $adminPassword
+              </powershell>
+              EOF
+
+  # Define a senha administrativa via user-data
+  #  user_data = <<EOF
+  #<powershell>
+  ## Define a senha do administrador
+  #$adminPassword = ConvertTo-SecureString "SuaSenhaSegura123!" -AsPlainText -Force
+  #Set-LocalUser -Name "Administrator" -Password $adminPassword
+  #</powershell>
+  #EOF
+
+}
+
+# Output com informações úteis
+output "instance_id" {
+  value = aws_instance.windows_server.id
+}
+
+output "public_ip" {
+  value = aws_instance.windows_server.public_ip
+}
+
+output "rdp_connection" {
+  value = "mstsc /v:${aws_instance.windows_server.public_ip}"
+}
+
+output "administrator_password" {
+  value     = "SuaSenhaSegura123!"
+  sensitive = true
+}

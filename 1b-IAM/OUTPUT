@@ -1,0 +1,87 @@
+aws_ident = "487985088503"
+iam_ec2_s3_role = {
+  "arn" = "arn:aws:iam::487985088503:role/ec2-s3-role"
+  "assume_role_policy" = "{\"Statement\":[{\"Action\":\"sts:AssumeRole\",\"Effect\":\"Allow\",\"Principal\":{\"Service\":\"ec2.amazonaws.com\"}}],\"Version\":\"2012-10-17\"}"
+  "create_date" = "2025-07-02T21:38:54Z"
+  "description" = ""
+  "force_detach_policies" = false
+  "id" = "ec2-s3-role"
+  "inline_policy" = toset([])
+  "managed_policy_arns" = toset([])
+  "max_session_duration" = 3600
+  "name" = "ec2-s3-role"
+  "name_prefix" = ""
+  "path" = "/"
+  "permissions_boundary" = ""
+  "tags" = tomap(null) /* of string */
+  "tags_all" = tomap({
+    "Environment" = "Projeto-bia"
+    "Management" = "Terraform"
+    "Owner" = "Junior_Fernandes"
+    "Terraform" = "true"
+  })
+  "unique_id" = "AROAXDHRNQ73TRSSHDVH5"
+}
+iam_ecs_atach_role = "ecs-instance-profile"
+iam_instance_profile_ssm_profile_name = {
+  "arn" = "arn:aws:iam::487985088503:instance-profile/ec2-ssm-profile"
+  "create_date" = "2025-07-02T21:38:55Z"
+  "id" = "ec2-ssm-profile"
+  "name" = "ec2-ssm-profile"
+  "name_prefix" = ""
+  "path" = "/"
+  "role" = "ec2-ssm-role"
+  "tags" = tomap(null) /* of string */
+  "tags_all" = tomap({
+    "Environment" = "Projeto-bia"
+    "Management" = "Terraform"
+    "Owner" = "Junior_Fernandes"
+    "Terraform" = "true"
+  })
+  "unique_id" = "AIPAXDHRNQ735AWNVQ2BS"
+}
+iam_s3_atach_role = {
+  "id" = "ec2-s3-role-20250702213855985200000009"
+  "policy_arn" = "arn:aws:iam::aws:policy/AdministratorAccess"
+  "role" = "ec2-s3-role"
+}
+iam_s3_profile = {
+  "arn" = "arn:aws:iam::487985088503:instance-profile/ec2-s3-profile"
+  "create_date" = "2025-07-02T21:38:55Z"
+  "id" = "ec2-s3-profile"
+  "name" = "ec2-s3-profile"
+  "name_prefix" = ""
+  "path" = "/"
+  "role" = "ec2-s3-role"
+  "tags" = tomap(null) /* of string */
+  "tags_all" = tomap({
+    "Environment" = "Projeto-bia"
+    "Management" = "Terraform"
+    "Owner" = "Junior_Fernandes"
+    "Terraform" = "true"
+  })
+  "unique_id" = "AIPAXDHRNQ73634TWID7V"
+}
+iam_ssm_profile = {
+  "arn" = "arn:aws:iam::487985088503:instance-profile/ec2-ssm-profile"
+  "create_date" = "2025-07-02T21:38:55Z"
+  "id" = "ec2-ssm-profile"
+  "name" = "ec2-ssm-profile"
+  "name_prefix" = ""
+  "path" = "/"
+  "role" = "ec2-ssm-role"
+  "tags" = tomap(null) /* of string */
+  "tags_all" = tomap({
+    "Environment" = "Projeto-bia"
+    "Management" = "Terraform"
+    "Owner" = "Junior_Fernandes"
+    "Terraform" = "true"
+  })
+  "unique_id" = "AIPAXDHRNQ735AWNVQ2BS"
+}
+ssm_atach_role = {
+  "id" = "ec2-ssm-role-20250702213855382600000001"
+  "policy_arn" = "arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore"
+  "role" = "ec2-ssm-role"
+}
+ssm_role = "ec2-ssm-role"

@@ -1,0 +1,46 @@
+# See https://pre-commit.com for more information
+# See https://pre-commit.com/hooks.html for more hooks
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
+    hooks:
+      - id: check-yaml
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+
+  - repo: https://github.com/antonbabenko/pre-commit-terraform
+    rev: v1.92.0
+    hooks:
+      - id: terraform_fmt
+        # Este hook irá formatar o código em cada diretório que contém arquivos .tf
+      - id: terraform_validate
+      - id: terraform_tflint
+        args:
+          - '--args=--only=terraform_deprecated_interpolation'
+          - '--args=--only=terraform_deprecated_index'
+          - '--args=--only=terraform_unused_declarations'
+          - '--args=--only=terraform_comment_syntax'
+          - '--args=--only=terraform_documented_outputs'
+          - '--args=--only=terraform_documented_variables'
+          - '--args=--only=terraform_typed_variables'
+          - '--args=--enable-rule=aws_instance_missing_tags' # Exemplo de regra específica da AWS
+
+      - id: terraform_tfsec
+        args:
+          - '--args=--config-file .tfsec.yml' # Opcional: para configurações personalizadas
+
+      # Hook para documentação automática
+      - id: terraform_docs
+        args:
+          - --hook-config=--path-to-file=README.md # Nome do arquivo de documentação
+          - --hook-config=--add-to-existing-file=true # Adiciona ao arquivo existente
+          - --hook-config=--create-file-if-not-exist=true # Cria o arquivo se não existir
+          - --args=--sort-by-required # Argumento para ordenar variáveis
+
+  - repo: https://github.com/bridgecrewio/checkov.git
+    rev: 3.2.120
+    hooks:
+    - id: checkov
+      name: checkov
+      args: ["-d", "."] # Escaneia o diretório atual
+      verbose: true

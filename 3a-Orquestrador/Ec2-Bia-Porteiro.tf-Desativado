@@ -1,0 +1,215 @@
+resource "aws_instance" "ec2_bia_porteiro" {
+
+  depends_on = [aws_key_pair.deployer]
+
+  #count = 1
+  #ami   = var.amis["Ubnt-us-east-1"]
+  #ami           = data.aws_ami.ubuntu_linux.id
+  #data.terraform_remote_state.remote-state-information.outputs.autor
+  ami = data.aws_ami.amazon_linux.id
+  #data.terraform_remote_state.vpc.outputs.ami_amazon_linux.id
+  instance_type = "t3.micro"
+
+  key_name = var.key_name
+
+  #Selecionar VPC
+  #vpc_id      = module.vpc.vpc_id
+
+  #Selecionar SubRede
+  #subnet_id = module.vpc.vpc_id.public_subnets[0]
+  subnet_id = data.terraform_remote_state.vpc.outputs.vpc_public_subnets_id[0]
+  # module.vpc.public_subnets[0]
+
+  #Atribuir IP Publico
+  associate_public_ip_address = true
+
+  #Definir Volume
+
+  user_data = file("InstallBia.sh")
+
+  # Associar o Role SSM à instância EC2
+  iam_instance_profile = data.terraform_remote_state.iam.outputs.iam_ssm_profile.id
+
+  tags = {
+    Name        = "Bia Porteiro"
+    Terraform   = "true"
+    Environment = "Projeto"
+    Management  = "Terraform"
+    #Id_EFS      = data.terraform_remote_state.efs.outputs.efs_fs_id
+  }
+
+  vpc_security_group_ids = ["${data.terraform_remote_state.sg.outputs.sg_bia_dev}"]
+
+  provisioner "file" {
+    source      = "Substituir_DB_HOST.sh"
+    destination = "/home/ec2-user/Substituir_DB_HOST.sh"
+  }
+
+  provisioner "remote-exec" {
+    inline = [
+      "mkdir -p /home/ec2-user/Bia",
+      "cd /home/ec2-user/Bia",
+      "echo '${data.terraform_remote_state.rds.outputs.db_db_address}' >> .env",
+      "echo '${aws_instance.ec2_bia_porteiro.public_ip}' >> .PublicIP",
+      "cd ..",
+      "sleep 185",
+      "sudo chown -R ec2-user:ec2-user *",
+      "chmod +x /home/ec2-user/Substituir_DB_HOST.sh",
+      "/home/ec2-user/Substituir_DB_HOST.sh",
+      "cd /home/ec2-user/bia",
+      "sudo docker compose up -d",
+      "sleep 15",
+      "sudo docker compose exec server bash -c 'npx sequelize db:migrate'"
+    ]
+
+  }
+
+  connection {
+    type        = "ssh"
+    user        = "ec2-user"
+    private_key = file("aws-key-terraform")
+    host        = self.public_ip
+    timeout     = "55s"
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+https://hotmart.com/pt-BR/club/formacaoaws/products/1930176/content/z7rWBX6EOj?source=CLASS_MODULES_LIST
+Criando Clister Henrylle
+*/
+
+/*
+Acoes Banco de Dados
+====================
+1  docker-compose up -d
+
+   1  cd bia/
+    2  cp scripts/ecs/unix/*.sh .
+    3  chmod +x *.sh
+    4  ls -lha
+    5  vi Dockerfile
+    6  vi docker-compose.yml 
+    7  docker compose up -d
+    8  cat README.md 
+    9  docker compose exec server bash -c 'npx sequelize db:migrate'
+   10  history
+
+
+
+ 4  cd bia
+    5  ls -lha
+    6  cat rodar_app_local_unix.sh 
+    7  docker compose up -d
+    8  docker-compose up -d
+    9  vi Dockerfile
+   10  docker-compose down
+   11  docker-compose build server
+   12  docker-compose up -d
+   13  docker-compose down -v
+   14  cat README.md 
+   15  docker-compose up -d
+   16  docker compose exec server bash -c 'npx sequelize db:migrate'
+   17  docker-compose exec server bash -c 'npx sequelize db:migrate'
+   18  docker-compose exec server bash -c 'npx sequelize db:create'
+   19  docker-compose up -d
+   20  docker-compose exec server bash -c 'npx sequelize db:create'
+   21  docker-compose exec server bash -c 'npx sequelize db:migrate'
+   22  pwd
+   23  docker container ls
+   24  docker-compose down
+   25  vi Dockerfile
+   26  docker-compose up -d
+   27  vi Dockerfile
+   28  docker-compose build server
+   29  docker-compose up -d
+   30  history 
+
+   /home/junior/Dados/FormacaoAWS/Terraform/3a-Orquestrador
+╷
+│ Error: Reference to undeclared resource
+│ 
+│   on Ec2.tf line 77, in resource "aws_instance" "ec2_bia_dev":
+│   77:   vpc_security_group_ids = ["${aws_security_group.sg_bia_dev.id}"]
+│ 
+│ A managed resource "aws_security_group" "sg_bia_dev" has not been declared in the root module.
+╵
+╷
+│ Error: Reference to undeclared resource
+│ 
+│   on Ec2.tf line 77, in resource "aws_instance" "ec2_bia_dev":
+│   77:   vpc_security_group_ids = ["${aws_security_group.sg_bia_dev.id}"]
+│ 
+│ A managed resource "aws_security_group" "sg_bia_dev" has not been declared in the root module.
+╵
+./UP.sh: linha 91: cd: 5-ECR: Arquivo ou diretório inexistente
+/home/junior/Dados/FormacaoAWS/Terraform/3a-Orquestrador
+╷
+│ Error: Reference to undeclared resource
+│ 
+│   on Ec2.tf line 77, in resource "aws_instance" "ec2_bia_dev":
+│   77:   vpc_security_group_ids = ["${aws_security_group.sg_bia_dev.id}"]
+│ 
+│ A managed resource "aws_security_group" "sg_bia_dev" has not been declared in the root module.
+╵
+╷
+│ Error: Reference to undeclared resource
+│ 
+│   on Ec2.tf line 77, in resource "aws_instance" "ec2_bia_dev":
+│   77:   vpc_security_group_ids = ["${aws_security_group.sg_bia_dev.id}"]
+│ 
+│ A managed resource "aws_security_group" "sg_bia_dev" has not been declared in the root module.
+╵
+
+*/
+
+/*
+      # Configurar RDS Banco Zabbix
+      "sudo mysql -hvar.zabbix_db_server -uvar.zabbix_db_user -pvar.zabbix_db_pass -e 'create user "var.zabbix_db_user"@"var.zabbix_db_server" identified by "var.zabbix_db_pass""",
+      "sudo mysql -hvar.zabbix_db_server -uvar.zabbix_db_user -pvar.zabbix_db_pass -e 'grant all privileges on var.zabbix_db_user.* to "var.zabbix_db_name}"@"var.zabbix_db_server}"'",
+      "sudo mysql -hvar.zabbix_db_server -uvar.zabbix_db_user -pvar.zabbix_db_pass -e 'set global log_bin_trust_function_creators = 1",
+*/
+
+
+/*
+
+      # Criar diretório para montagem
+      "sudo mkdir -p /mnt/efs",
+      "sleep 120",
+
+      # Montar o EFS
+      "sudo mount -t efs ${data.terraform_remote_state.efs.outputs.efs_fs_id}:/ /home/ec2-user/Data",
+      "sudo chmod go+rw /home/ec2-user/Data",
+      "sudo bash -c 'echo Welcome  > /home/ec2-user/Data/index.html'",
+      "sudo chown -R ec2-user:ec2-user /home/ec2-user/",
+
+      # Persistir a montagem (opcional)
+      "sudo bash -c echo '${data.terraform_remote_state.efs.outputs.efs_fs_id}:/ /home/ec2-user/Data efs defaults,_netdev 0 0' | sudo tee -a /etc/fstab"
+      */

@@ -1,0 +1,8 @@
+sg_bia_alb = "sg-0fa6bddef5de0ef0d"
+sg_bia_db = "sg-07e3a8ba0224b70fa"
+sg_bia_dev = "sg-0fe59b5fcc772d48c"
+sg_bia_dev_mssql = "sg-08d8ef96744d740b6"
+sg_bia_ec2 = "sg-0c34f898c9ef6136e"
+sg_bia_web = "sg-01b915c2fc11e1521"
+sg_mssql_db = "sg-00c632d5a08efac3f"
+sg_windows = "sg-0930c61af52bd421f"

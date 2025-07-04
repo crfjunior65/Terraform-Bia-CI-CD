@@ -1,0 +1,1533 @@
+/home/junior/Dados/FormacaoAWS/Terraform/1-VPC
+Success! The configuration is valid.
+
+module.vpc.aws_vpc.this[0]: Creating...
+module.vpc.aws_vpc.this[0]: Still creating... [10s elapsed]
+module.vpc.aws_vpc.this[0]: Creation complete after 14s [id=vpc-0e61fa7107cbef3f4]
+module.vpc.aws_route_table.database[0]: Creating...
+module.vpc.aws_default_security_group.this[0]: Creating...
+module.vpc.aws_default_route_table.default[0]: Creating...
+module.vpc.aws_route_table.database[2]: Creating...
+module.vpc.aws_route_table.database[1]: Creating...
+module.vpc.aws_subnet.database[0]: Creating...
+module.vpc.aws_subnet.database[2]: Creating...
+module.vpc.aws_subnet.database[1]: Creating...
+module.vpc.aws_route_table.private[2]: Creating...
+module.vpc.aws_default_network_acl.this[0]: Creating...
+module.vpc.aws_default_route_table.default[0]: Creation complete after 1s [id=rtb-0e4d067e261e99ef7]
+module.vpc.aws_route_table.private[0]: Creating...
+module.vpc.aws_route_table.database[0]: Creation complete after 1s [id=rtb-03533d8c668d635e2]
+module.vpc.aws_route_table.private[1]: Creating...
+module.vpc.aws_route_table.database[2]: Creation complete after 1s [id=rtb-0bcd3ea9cdee76b34]
+module.vpc.aws_subnet.public[0]: Creating...
+module.vpc.aws_route_table.database[1]: Creation complete after 1s [id=rtb-053892cf4db95bdb9]
+module.vpc.aws_subnet.public[2]: Creating...
+module.vpc.aws_subnet.database[2]: Creation complete after 1s [id=subnet-0d10fdefa7a6e953f]
+module.vpc.aws_internet_gateway.this[0]: Creating...
+module.vpc.aws_subnet.database[0]: Creation complete after 1s [id=subnet-03a436b7c81c7ae01]
+module.vpc.aws_subnet.public[1]: Creating...
+module.vpc.aws_route_table.private[2]: Creation complete after 1s [id=rtb-0c235bab753a5a74f]
+module.vpc.aws_route_table.public[0]: Creating...
+module.vpc.aws_route_table.private[0]: Creation complete after 1s [id=rtb-0e28e8a5fccef3d47]
+module.vpc.aws_subnet.private[0]: Creating...
+module.vpc.aws_route_table.private[1]: Creation complete after 1s [id=rtb-0d8cb226538f48812]
+module.vpc.aws_subnet.private[1]: Creating...
+module.vpc.aws_default_network_acl.this[0]: Creation complete after 2s [id=acl-01827ee6edb95dc82]
+module.vpc.aws_subnet.private[2]: Creating...
+module.vpc.aws_route_table.public[0]: Creation complete after 1s [id=rtb-00eb436604c681da7]
+module.vpc.aws_subnet.public[1]: Creation complete after 1s [id=subnet-035ca12938c725f29]
+module.vpc.aws_subnet.public[2]: Creation complete after 1s [id=subnet-016e9f6e20e12c850]
+module.vpc.aws_default_security_group.this[0]: Creation complete after 2s [id=sg-036215eef10bbc872]
+module.vpc.aws_internet_gateway.this[0]: Creation complete after 1s [id=igw-06dffe86580b4cf90]
+module.vpc.aws_route.public_internet_gateway[0]: Creating...
+module.vpc.aws_subnet.database[1]: Creation complete after 3s [id=subnet-00022000712e819ce]
+module.vpc.aws_route_table_association.database[1]: Creating...
+module.vpc.aws_route_table_association.database[2]: Creating...
+module.vpc.aws_route_table_association.database[0]: Creating...
+module.vpc.aws_db_subnet_group.database[0]: Creating...
+module.vpc.aws_subnet.private[0]: Creation complete after 1s [id=subnet-005bce04afa5225ac]
+module.vpc.aws_subnet.private[1]: Creation complete after 1s [id=subnet-05a2e864c4fc4a9a2]
+module.vpc.aws_route_table_association.database[0]: Creation complete after 0s [id=rtbassoc-0147ba2bd521e2277]
+module.vpc.aws_route_table_association.database[1]: Creation complete after 0s [id=rtbassoc-06df71f50b29515ee]
+module.vpc.aws_route_table_association.database[2]: Creation complete after 0s [id=rtbassoc-0c122db7271744e00]
+module.vpc.aws_subnet.private[2]: Creation complete after 1s [id=subnet-0da63f0ea7fbef2ec]
+module.vpc.aws_route_table_association.private[1]: Creating...
+module.vpc.aws_route_table_association.private[2]: Creating...
+module.vpc.aws_route_table_association.private[0]: Creating...
+module.vpc.aws_route.public_internet_gateway[0]: Creation complete after 2s [id=r-rtb-00eb436604c681da71080289494]
+module.vpc.aws_route_table_association.private[1]: Creation complete after 1s [id=rtbassoc-0fdf38eda600f1021]
+module.vpc.aws_route_table_association.private[2]: Creation complete after 1s [id=rtbassoc-097c19d05ae472369]
+module.vpc.aws_route_table_association.private[0]: Creation complete after 1s [id=rtbassoc-052a4e3657ce22da3]
+module.vpc.aws_subnet.public[0]: Creation complete after 3s [id=subnet-04d5a9a4e6316b8e1]
+module.vpc.aws_route_table_association.public[1]: Creating...
+module.vpc.aws_route_table_association.public[2]: Creating...
+module.vpc.aws_route_table_association.public[0]: Creating...
+module.vpc.aws_db_subnet_group.database[0]: Creation complete after 2s [id=formacao_aws-vpc]
+module.vpc.aws_route_table_association.public[2]: Creation complete after 1s [id=rtbassoc-0ea0f0573693d2e8d]
+module.vpc.aws_route_table_association.public[1]: Creation complete after 1s [id=rtbassoc-0dd35ab0a2821c3fb]
+module.vpc.aws_route_table_association.public[0]: Creation complete after 1s [id=rtbassoc-096b5bddb43e2bbc3]
+
+Apply complete! Resources: 32 added, 0 changed, 0 destroyed.
+
+Outputs:
+
+vpc_azs_id = tolist([
+  "us-east-1a",
+  "us-east-1b",
+  "us-east-1c",
+])
+vpc_database_subnet_arns = [
+  "arn:aws:ec2:us-east-1:390403858393:subnet/subnet-03a436b7c81c7ae01",
+  "arn:aws:ec2:us-east-1:390403858393:subnet/subnet-00022000712e819ce",
+  "arn:aws:ec2:us-east-1:390403858393:subnet/subnet-0d10fdefa7a6e953f",
+]
+vpc_db_subnet_grp_name = "formacao_aws-vpc"
+vpc_name = "Formacao_AWS-vpc"
+vpc_private_subnets_cidr_blocks = tolist([
+  "10.20.201.0/24",
+  "10.20.202.0/24",
+  "10.20.203.0/24",
+])
+vpc_private_subnets_id = [
+  "subnet-005bce04afa5225ac",
+  "subnet-05a2e864c4fc4a9a2",
+  "subnet-0da63f0ea7fbef2ec",
+]
+vpc_public_subnets_cidr_blocks = tolist([
+  "10.20.101.0/24",
+  "10.20.102.0/24",
+  "10.20.103.0/24",
+])
+vpc_public_subnets_id = [
+  "subnet-04d5a9a4e6316b8e1",
+  "subnet-035ca12938c725f29",
+  "subnet-016e9f6e20e12c850",
+]
+vpc_vpc_cidr_block = "10.20.0.0/16"
+vpc_vpc_id = "vpc-0e61fa7107cbef3f4"
+/home/junior/Dados/FormacaoAWS/Terraform/1a-SegGroup
+Success! The configuration is valid.
+
+aws_security_group.bia-alb: Creating...
+aws_security_group.bia-web: Creating...
+aws_security_group.bia-dev: Creating...
+aws_security_group.bia-dev: Creation complete after 5s [id=sg-0f51bac115b52ee34]
+aws_security_group.bia-alb: Creation complete after 5s [id=sg-01fd70532104c0457]
+aws_security_group.bia-web: Creation complete after 5s [id=sg-005b77b81e62f3bad]
+aws_security_group.bia-ec2: Creating...
+aws_security_group.bia-ec2: Creation complete after 4s [id=sg-06e07d3b44eb6730d]
+aws_security_group.bia-db: Creating...
+aws_security_group.bia-db: Creation complete after 4s [id=sg-0081d70e584f1c7a3]
+
+Apply complete! Resources: 5 added, 0 changed, 0 destroyed.
+
+Outputs:
+
+sg_bia_alb = "sg-01fd70532104c0457"
+sg_bia_db = "sg-0081d70e584f1c7a3"
+sg_bia_dev = "sg-0f51bac115b52ee34"
+sg_bia_ec2 = "sg-06e07d3b44eb6730d"
+sg_bia_web = "sg-005b77b81e62f3bad"
+/home/junior/Dados/FormacaoAWS/Terraform/1b-IAM
+Success! The configuration is valid.
+
+aws_iam_role.ec2_s3_role: Creating...
+aws_iam_role.ssm_role: Creating...
+aws_iam_role.ecs_instance_role: Creating...
+aws_iam_role.ecs_instance_role: Creation complete after 2s [id=ecs-instance-role]
+aws_iam_role.ssm_role: Creation complete after 2s [id=ec2-ssm-role]
+aws_iam_role.ec2_s3_role: Creation complete after 2s [id=ec2-s3-role]
+aws_iam_role_policy_attachment.ecs_instance_policy: Creating...
+aws_iam_role_policy_attachment.ssm_managed_policy: Creating...
+aws_iam_role_policy_attachment.ecs_instance_ecr_policy: Creating...
+aws_iam_role_policy_attachment.ecs_instance_cloudwatch_policy: Creating...
+aws_iam_instance_profile.ecs_instance_profile: Creating...
+aws_iam_role_policy_attachment.ecs_instance_ecs_policy: Creating...
+aws_iam_instance_profile.s3_profile: Creating...
+aws_iam_role_policy_attachment.s3_managed_policy: Creating...
+aws_iam_role_policy_attachment.ecr_full_access: Creating...
+aws_iam_instance_profile.ssm_profile: Creating...
+aws_iam_role_policy_attachment.ecs_instance_policy: Creation complete after 1s [id=ecs-instance-role-20250310175442172100000002]
+aws_iam_role_policy_attachment.ecs_full_access: Creating...
+aws_iam_role_policy_attachment.ecs_instance_ecr_policy: Creation complete after 1s [id=ecs-instance-role-20250310175442158600000001]
+aws_iam_role_policy_attachment.ecs_instance_cloudwatch_policy: Creation complete after 1s [id=ecs-instance-role-20250310175442364700000004]
+aws_iam_role_policy_attachment.ecs_instance_ecs_policy: Creation complete after 1s [id=ecs-instance-role-20250310175442200900000003]
+aws_iam_role_policy_attachment.ssm_managed_policy: Creation complete after 1s [id=ec2-ssm-role-20250310175442419700000005]
+aws_iam_role_policy_attachment.s3_managed_policy: Creation complete after 1s [id=ec2-s3-role-20250310175442558100000006]
+aws_iam_role_policy_attachment.ecr_full_access: Creation complete after 1s [id=ec2-ssm-role-20250310175442641800000007]
+aws_iam_role_policy_attachment.ecs_full_access: Creation complete after 0s [id=ec2-ssm-role-20250310175442823100000008]
+aws_iam_instance_profile.ecs_instance_profile: Creation complete after 7s [id=ecs-instance-profile]
+aws_iam_instance_profile.s3_profile: Creation complete after 7s [id=ec2-s3-profile]
+aws_iam_instance_profile.ssm_profile: Creation complete after 7s [id=ec2-ssm-profile]
+
+Apply complete! Resources: 14 added, 0 changed, 0 destroyed.
+
+Outputs:
+
+aws_ident = "390403858393"
+iam_ec2_s3_role = {
+  "arn" = "arn:aws:iam::390403858393:role/ec2-s3-role"
+  "assume_role_policy" = "{\"Statement\":[{\"Action\":\"sts:AssumeRole\",\"Effect\":\"Allow\",\"Principal\":{\"Service\":\"ec2.amazonaws.com\"}}],\"Version\":\"2012-10-17\"}"
+  "create_date" = "2025-03-10T17:54:41Z"
+  "description" = ""
+  "force_detach_policies" = false
+  "id" = "ec2-s3-role"
+  "inline_policy" = toset([])
+  "managed_policy_arns" = toset([])
+  "max_session_duration" = 3600
+  "name" = "ec2-s3-role"
+  "name_prefix" = ""
+  "path" = "/"
+  "permissions_boundary" = ""
+  "tags" = tomap(null) /* of string */
+  "tags_all" = tomap({
+    "Environment" = "Projeto-bia"
+    "Management" = "Terraform"
+    "Owner" = "Junior_Fernandes"
+    "Terraform" = "true"
+  })
+  "unique_id" = "AROAVVZPCD7MVC6OHSOI3"
+}
+iam_ecs_atach_role = "ecs-instance-profile"
+iam_instance_profile_ssm_profile_name = {
+  "arn" = "arn:aws:iam::390403858393:instance-profile/ec2-ssm-profile"
+  "create_date" = "2025-03-10T17:54:42Z"
+  "id" = "ec2-ssm-profile"
+  "name" = "ec2-ssm-profile"
+  "name_prefix" = ""
+  "path" = "/"
+  "role" = "ec2-ssm-role"
+  "tags" = tomap(null) /* of string */
+  "tags_all" = tomap({
+    "Environment" = "Projeto-bia"
+    "Management" = "Terraform"
+    "Owner" = "Junior_Fernandes"
+    "Terraform" = "true"
+  })
+  "unique_id" = "AIPAVVZPCD7MTRVSB6PEF"
+}
+iam_s3_atach_role = {
+  "id" = "ec2-s3-role-20250310175442558100000006"
+  "policy_arn" = "arn:aws:iam::aws:policy/AdministratorAccess"
+  "role" = "ec2-s3-role"
+}
+iam_s3_profile = {
+  "arn" = "arn:aws:iam::390403858393:instance-profile/ec2-s3-profile"
+  "create_date" = "2025-03-10T17:54:42Z"
+  "id" = "ec2-s3-profile"
+  "name" = "ec2-s3-profile"
+  "name_prefix" = ""
+  "path" = "/"
+  "role" = "ec2-s3-role"
+  "tags" = tomap(null) /* of string */
+  "tags_all" = tomap({
+    "Environment" = "Projeto-bia"
+    "Management" = "Terraform"
+    "Owner" = "Junior_Fernandes"
+    "Terraform" = "true"
+  })
+  "unique_id" = "AIPAVVZPCD7MR6DB6NGMT"
+}
+iam_ssm_profile = {
+  "arn" = "arn:aws:iam::390403858393:instance-profile/ec2-ssm-profile"
+  "create_date" = "2025-03-10T17:54:42Z"
+  "id" = "ec2-ssm-profile"
+  "name" = "ec2-ssm-profile"
+  "name_prefix" = ""
+  "path" = "/"
+  "role" = "ec2-ssm-role"
+  "tags" = tomap(null) /* of string */
+  "tags_all" = tomap({
+    "Environment" = "Projeto-bia"
+    "Management" = "Terraform"
+    "Owner" = "Junior_Fernandes"
+    "Terraform" = "true"
+  })
+  "unique_id" = "AIPAVVZPCD7MTRVSB6PEF"
+}
+ssm_atach_role = {
+  "id" = "ec2-ssm-role-20250310175442419700000005"
+  "policy_arn" = "arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore"
+  "role" = "ec2-ssm-role"
+}
+ssm_role = "ec2-ssm-role"
+/home/junior/Dados/FormacaoAWS/Terraform/3-RDS
+Success! The configuration is valid.
+
+aws_db_instance.db-Projeto: Creating...
+aws_db_instance.db-Projeto: Still creating... [10s elapsed]
+aws_db_instance.db-Projeto: Still creating... [20s elapsed]
+aws_db_instance.db-Projeto: Still creating... [30s elapsed]
+aws_db_instance.db-Projeto: Still creating... [40s elapsed]
+aws_db_instance.db-Projeto: Still creating... [50s elapsed]
+aws_db_instance.db-Projeto: Still creating... [1m0s elapsed]
+aws_db_instance.db-Projeto: Still creating... [1m10s elapsed]
+aws_db_instance.db-Projeto: Still creating... [1m20s elapsed]
+aws_db_instance.db-Projeto: Still creating... [1m30s elapsed]
+aws_db_instance.db-Projeto: Still creating... [1m40s elapsed]
+aws_db_instance.db-Projeto: Still creating... [1m50s elapsed]
+aws_db_instance.db-Projeto: Still creating... [2m0s elapsed]
+aws_db_instance.db-Projeto: Still creating... [2m10s elapsed]
+aws_db_instance.db-Projeto: Still creating... [2m20s elapsed]
+aws_db_instance.db-Projeto: Still creating... [2m30s elapsed]
+aws_db_instance.db-Projeto: Still creating... [2m40s elapsed]
+aws_db_instance.db-Projeto: Still creating... [2m50s elapsed]
+aws_db_instance.db-Projeto: Still creating... [3m0s elapsed]
+aws_db_instance.db-Projeto: Still creating... [3m10s elapsed]
+aws_db_instance.db-Projeto: Still creating... [3m20s elapsed]
+aws_db_instance.db-Projeto: Still creating... [3m30s elapsed]
+aws_db_instance.db-Projeto: Still creating... [3m40s elapsed]
+aws_db_instance.db-Projeto: Still creating... [3m50s elapsed]
+aws_db_instance.db-Projeto: Still creating... [4m0s elapsed]
+aws_db_instance.db-Projeto: Still creating... [4m10s elapsed]
+aws_db_instance.db-Projeto: Still creating... [4m20s elapsed]
+aws_db_instance.db-Projeto: Still creating... [4m30s elapsed]
+aws_db_instance.db-Projeto: Still creating... [4m40s elapsed]
+aws_db_instance.db-Projeto: Creation complete after 4m40s [id=db-6TXECAC5KFPRGU4D6VBMODIWYY]
+
+Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
+
+Outputs:
+
+db_arn = "arn:aws:rds:us-east-1:390403858393:db:bia"
+db_db_address = "bia.crgg8y2mwhyo.us-east-1.rds.amazonaws.com"
+db_db_engine = "postgres"
+db_db_id = "db-6TXECAC5KFPRGU4D6VBMODIWYY"
+db_db_identifier = "bia"
+db_db_name = "bia"
+db_db_password = <sensitive>
+db_db_port = 5432
+db_db_username = "postgres"
+db_end_point = "bia.crgg8y2mwhyo.us-east-1.rds.amazonaws.com:5432"
+/home/junior/Dados/FormacaoAWS/Terraform/3a-Orquestrador
+Success! The configuration is valid.
+
+aws_key_pair.deployer: Creating...
+aws_key_pair.deployer: Creation complete after 1s [id=aws-key-terraform]
+aws_instance.ec2_bia_porteiro: Creating...
+aws_instance.ec2_bia_porteiro: Still creating... [10s elapsed]
+aws_instance.ec2_bia_porteiro: Provisioning with 'file'...
+aws_instance.ec2_bia_porteiro: Still creating... [20s elapsed]
+aws_instance.ec2_bia_porteiro: Provisioning with 'remote-exec'...
+aws_instance.ec2_bia_porteiro (remote-exec): Connecting to remote host via SSH...
+aws_instance.ec2_bia_porteiro (remote-exec):   Host: 54.198.143.182
+aws_instance.ec2_bia_porteiro (remote-exec):   User: ec2-user
+aws_instance.ec2_bia_porteiro (remote-exec):   Password: false
+aws_instance.ec2_bia_porteiro (remote-exec):   Private key: true
+aws_instance.ec2_bia_porteiro (remote-exec):   Certificate: false
+aws_instance.ec2_bia_porteiro (remote-exec):   SSH Agent: true
+aws_instance.ec2_bia_porteiro (remote-exec):   Checking Host Key: false
+aws_instance.ec2_bia_porteiro (remote-exec):   Target Platform: unix
+aws_instance.ec2_bia_porteiro: Still creating... [30s elapsed]
+aws_instance.ec2_bia_porteiro (remote-exec): Connected!
+aws_instance.ec2_bia_porteiro: Still creating... [40s elapsed]
+aws_instance.ec2_bia_porteiro: Still creating... [50s elapsed]
+aws_instance.ec2_bia_porteiro: Still creating... [1m0s elapsed]
+aws_instance.ec2_bia_porteiro: Still creating... [1m10s elapsed]
+aws_instance.ec2_bia_porteiro: Still creating... [1m20s elapsed]
+aws_instance.ec2_bia_porteiro: Still creating... [1m30s elapsed]
+aws_instance.ec2_bia_porteiro: Still creating... [1m40s elapsed]
+aws_instance.ec2_bia_porteiro: Still creating... [1m50s elapsed]
+aws_instance.ec2_bia_porteiro: Still creating... [2m0s elapsed]
+aws_instance.ec2_bia_porteiro: Still creating... [2m10s elapsed]
+aws_instance.ec2_bia_porteiro: Still creating... [2m20s elapsed]
+aws_instance.ec2_bia_porteiro: Still creating... [2m30s elapsed]
+aws_instance.ec2_bia_porteiro: Still creating... [2m40s elapsed]
+aws_instance.ec2_bia_porteiro: Still creating... [2m50s elapsed]
+aws_instance.ec2_bia_porteiro: Still creating... [3m0s elapsed]
+aws_instance.ec2_bia_porteiro: Still creating... [3m10s elapsed]
+aws_instance.ec2_bia_porteiro: Still creating... [3m20s elapsed]
+aws_instance.ec2_bia_porteiro: Still creating... [3m30s elapsed]
+aws_instance.ec2_bia_porteiro (remote-exec): Informação substituída com sucesso no arquivo de destino.
+[+] Running 13/15bia_porteiro (remote-exec): 
+[+] Running 13/15bia_porteiro (remote-exec):  ⠏ database 14 layers [⣿⣿⣿⣿⣿⣿⣿⣿⣤⣿⣿⣿⣿⣿] 64.79MB/108.6MB Pulling 2.0s 
+[+] Running 14/15bia_porteiro (remote-exec):  ⠴ database 14 layers [⣿⣿⣿⣿⣿⣿⣿⣿⣶⣿⣿⣿⣿⣿] 94.53MB/108.6MB Pulling 2.6s 
+[+] Running 14/15bia_porteiro (remote-exec):  ⠏ database 14 layers [⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿]      0B/0B      Pulling 4.0s 
+[+] Running 14/15bia_porteiro (remote-exec):  ⠋ database 14 layers [⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿]      0B/0B      Pulling 5.1s 
+[+] Running 14/15bia_porteiro (remote-exec):  ⠙ database 14 layers [⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿]      0B/0B      Pulling 6.2s 
+[+] Running 14/15bia_porteiro (remote-exec):  ⠸ database 14 layers [⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿]      0B/0B      Pulling 6.4s 
+[+] Running 14/15bia_porteiro (remote-exec):  ⠴ database 14 layers [⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿]      0B/0B      Pulling 6.6s 
+[+] Running 14/15bia_porteiro (remote-exec):  ⠋ database 14 layers [⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿]      0B/0B      Pulling 9.1s 
+[+] Running 14/15bia_porteiro (remote-exec):  ⠹ database 14 layers [⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿]      0B/0B      Pulling 9.3s 
+[+] Running 15/15bia_porteiro (remote-exec):  ⠇ database 14 layers [⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿]      0B/0B      Pulling 9.9s 
+aws_instance.ec2_bia_porteiro (remote-exec):  ✔ database 14 layers [⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿]      0B/0B      Pulled 10.8s  
+aws_instance.ec2_bia_porteiro (remote-exec):    ✔ c57ee5000d61 Pull complete    0.6s  B/108.6MB2.4s 
+aws_instance.ec2_bia_porteiro (remote-exec):    ✔ 81b575116500 Pull complete    0.1s  
+aws_instance.ec2_bia_porteiro (remote-exec):    ✔ e12fff61d996 Pull complete    0.2s  
+aws_instance.ec2_bia_porteiro (remote-exec):    ✔ 50a849db7317 Pull complete    0.2s  
+aws_instance.ec2_bia_porteiro (remote-exec):    ✔ 432dd17f42df Pull complete    0.5s  
+aws_instance.ec2_bia_porteiro (remote-exec):    ✔ a1f5bcbba6b6 Pull complete    0.4s  
+aws_instance.ec2_bia_porteiro (remote-exec):    ✔ 6e501216828b Pull complete    0.5s  
+aws_instance.ec2_bia_porteiro (remote-exec):    ✔ ea24c7671c3d Pull complete    0.6s  
+aws_instance.ec2_bia_porteiro (remote-exec):    ✔ b7a5cd7c9b9a Pull complete    2.4s  
+aws_instance.ec2_bia_porteiro (remote-exec):    ✔ db7d78d9f46e Pull complete    0.7s  
+aws_instance.ec2_bia_porteiro (remote-exec):    ✔ 8c786fbf8634 Pull complete    0.7s  
+aws_instance.ec2_bia_porteiro (remote-exec):    ✔ 2831031f2a0e Pull complete    0.8s  
+aws_instance.ec2_bia_porteiro (remote-exec):    ✔ 75c5b068b243 Pull complete    0.8s  
+aws_instance.ec2_bia_porteiro (remote-exec):    ✔ 9590d9e20e85 Pull complete    0.9s  
+aws_instance.ec2_bia_porteiro (remote-exec): 
+[+] Building 0.0s (0/0)  docker:defaultxec): 
+[+] Building 0.0s (0/1)  docker:defaultxec): 
+[+] Building 0.1s (1/2)  docker:defaultxec): 
+[+] Building 0.4s (1/2)  docker:defaultxec):  => [server internal] load build   0.1s
+[+] Building 0.7s (3/15)  docker:defaultec):  => [server internal] load build   0.1s
+[+] Building 0.8s (3/15)  docker:defaultec):  => [server internal] load build   0.1s
+[+] Building 0.9s (3/15)  docker:defaultec):  => [server internal] load build   0.1s
+[+] Building 1.2s (4/15)  docker:defaultec):  => [server internal] load build   0.1s
+[+] Building 1.4s (4/15)  docker:defaultec):  => [server internal] load build   0.1s
+[+] Building 1.6s (4/15)  docker:defaultec):  => [server internal] load build   0.1s
+[+] Building 1.7s (4/15)  docker:defaultec):  => [server internal] load build   0.1s
+[+] Building 1.8s (4/15)  docker:defaultec):  => [server internal] load build   0.1s
+[+] Building 1.9s (4/15)  docker:defaultec):  => [server internal] load build   0.1s
+[+] Building 2.0s (4/15)  docker:defaultec):  => [server internal] load build   0.1s
+[+] Building 2.2s (4/15)  docker:defaultec):  => [server internal] load build   0.1s
+[+] Building 2.4s (4/15)  docker:defaultec):  => [server internal] load build   0.1s
+[+] Building 2.6s (4/15)  docker:defaultec):  => [server internal] load build   0.1s
+[+] Building 2.8s (4/15)  docker:defaultec):  => [server internal] load build   0.1s
+[+] Building 3.1s (4/15)  docker:defaultec):  => [server internal] load build   0.1s
+[+] Building 3.5s (4/15)  docker:defaultec):  => [server internal] load build   0.1s
+[+] Building 3.7s (4/15)  docker:defaultec):  => [server internal] load build   0.1s
+[+] Building 3.9s (4/15)  docker:defaultec):  => [server internal] load build   0.1s
+[+] Building 4.2s (4/15)  docker:defaultec):  => [server internal] load build   0.1s
+[+] Building 4.3s (4/15)  docker:defaultec):  => [server internal] load build   0.1s
+[+] Building 4.5s (4/15)  docker:defaultec):  => [server internal] load build   0.1s
+[+] Building 4.7s (4/15)  docker:defaultec):  => [server internal] load build   0.1s
+[+] Building 4.9s (4/15)  docker:defaultec):  => [server internal] load build   0.1s
+[+] Building 5.0s (4/15)  docker:defaultec):  => [server internal] load build   0.1s
+[+] Building 5.2s (4/15)  docker:defaultec):  => [server internal] load build   0.1s
+[+] Building 5.3s (4/15)  docker:defaultec):  => [server internal] load build   0.1s
+[+] Building 5.6s (4/15)  docker:defaultec):  => [server internal] load build   0.1s
+[+] Building 5.7s (4/15)  docker:defaultec):  => [server internal] load build   0.1s
+[+] Building 5.8s (4/15)  docker:defaultec):  => [server internal] load build   0.1s
+[+] Building 6.0s (4/15)  docker:defaultec):  => [server internal] load build   0.1s
+[+] Building 6.2s (5/15)  docker:defaultec):  => [server internal] load build   0.1s
+[+] Building 6.5s (5/15)  docker:defaultec):  => [server internal] load build   0.1s
+[+] Building 6.8s (5/15)  docker:defaultec):  => [server internal] load build   0.1s
+[+] Building 7.1s (5/15)  docker:defaultec):  => [server internal] load build   0.1s
+[+] Building 7.3s (5/15)  docker:defaultec):  => [server internal] load build   0.1s
+[+] Building 7.4s (5/15)  docker:defaultec):  => [server internal] load build   0.1s
+[+] Building 7.6s (5/15)  docker:defaultec):  => [server internal] load build   0.1s
+[+] Building 7.7s (5/15)  docker:defaultec):  => [server internal] load build   0.1s
+[+] Building 7.9s (5/15)  docker:defaultec):  => [server internal] load build   0.1s
+[+] Building 8.0s (5/15)  docker:defaultec):  => [server internal] load build   0.1s
+[+] Building 8.2s (5/15)  docker:defaultec):  => [server internal] load build   0.1s
+[+] Building 8.5s (5/15)  docker:defaultec):  => [server internal] load build   0.1s
+[+] Building 8.6s (5/15)  docker:defaultec):  => [server internal] load build   0.1s
+[+] Building 8.9s (5/15)  docker:defaultec):  => [server internal] load build   0.1s
+[+] Building 9.2s (5/15)  docker:defaultec):  => [server internal] load build   0.1s
+[+] Building 9.4s (5/15)  docker:defaultec):  => [server internal] load build   0.1s
+[+] Building 9.5s (5/15)  docker:defaultec):  => [server internal] load build   0.1s
+[+] Building 9.7s (5/15)  docker:defaultec):  => [server internal] load build   0.1s
+[+] Building 9.8s (5/15)  docker:defaultec):  => [server internal] load build   0.1s
+[+] Building 10.0s (5/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 10.1s (5/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 10.3s (5/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 10.4s (5/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 10.7s (5/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 10.9s (5/15)  docker:defaultc):  => [server internal] load build   0.1s
+aws_instance.ec2_bia_porteiro (remote-exec):  => [server internal] load build   0.1s
+[+] Building 11.0s (5/15)  docker:defaultc):  => => transferring dockerfi 564B  0.0s
+[+] Building 11.3s (5/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 11.5s (5/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 11.6s (5/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 11.8s (5/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 11.9s (5/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 12.1s (5/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 12.4s (5/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 12.5s (5/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 12.7s (5/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 13.0s (5/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 13.1s (5/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 13.3s (5/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 13.6s (5/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 13.7s (5/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 13.9s (5/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 14.0s (5/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 14.2s (5/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 14.3s (5/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 14.6s (5/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 14.9s (5/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 15.2s (5/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 15.4s (5/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 15.5s (5/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 15.7s (5/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 16.0s (5/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 16.1s (5/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 16.3s (5/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 16.6s (5/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 17.0s (5/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 17.3s (5/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 17.5s (5/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 17.6s (5/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 17.9s (5/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 18.2s (5/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 18.4s (5/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 18.5s (5/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 18.8s (5/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 19.1s (5/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 19.3s (5/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 19.4s (5/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 19.6s (5/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 19.7s (5/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 19.9s (5/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 20.0s (5/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 20.2s (5/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 20.5s (5/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 20.8s (6/15)  docker:defaultc):  => [server internal] load build   0.1s
+aws_instance.ec2_bia_porteiro (remote-exec):  => [server internal] load build   0.1s
+[+] Building 21.0s (6/15)  docker:defaultc):  => => transferring dockerfi 564B  0.0s
+[+] Building 21.3s (6/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 21.5s (6/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 21.7s (6/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 22.0s (6/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 22.1s (6/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 22.6s (6/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 22.9s (6/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 23.0s (6/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 23.3s (6/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 23.5s (6/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 23.6s (6/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 23.7s (6/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 24.0s (6/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 24.2s (6/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 24.4s (6/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 24.5s (6/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 24.7s (6/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 24.8s (6/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 25.0s (6/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 25.2s (6/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 25.4s (6/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 25.5s (6/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 25.7s (6/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 25.8s (6/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 26.0s (6/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 26.1s (6/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 26.3s (6/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 26.6s (6/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 26.7s (6/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 26.8s (6/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 27.1s (6/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 27.3s (6/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 27.6s (6/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 27.7s (6/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 27.8s (6/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 28.0s (6/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 28.2s (6/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 28.4s (6/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 28.7s (6/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 29.1s (6/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 29.4s (6/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 29.5s (6/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 29.8s (6/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 29.9s (6/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 30.1s (6/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 30.4s (6/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 30.7s (6/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 30.9s (6/15)  docker:defaultc):  => [server internal] load build   0.1s
+aws_instance.ec2_bia_porteiro (remote-exec):  => [server internal] load build   0.1s
+[+] Building 31.0s (6/15)  docker:defaultc):  => => transferring dockerfi 564B  0.0s
+[+] Building 31.2s (6/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 31.3s (6/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 31.5s (7/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 31.7s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 31.8s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 32.0s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 32.1s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 32.3s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 32.4s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 32.6s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 32.7s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 32.9s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 33.2s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 33.3s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 33.5s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 33.8s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 33.9s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 34.1s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 34.4s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 34.7s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 34.8s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 35.1s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 35.4s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 35.6s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 35.7s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 36.0s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 36.2s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 36.3s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 36.6s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 36.9s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 37.1s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 37.2s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 37.4s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 37.5s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 37.7s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 37.8s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 38.0s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 38.1s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 38.3s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 38.6s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 38.9s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 39.0s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 39.3s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 39.5s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 39.6s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 39.8s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 39.9s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 40.1s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 40.2s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 40.5s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 40.7s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 40.8s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+aws_instance.ec2_bia_porteiro (remote-exec):  => [server internal] load build   0.1s
+[+] Building 41.1s (9/15)  docker:defaultc):  => => transferring dockerfi 564B  0.0s
+[+] Building 41.3s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 41.6s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 41.7s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 41.9s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 42.0s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 42.2s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 42.5s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 42.6s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 42.8s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 43.1s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 43.2s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 43.4s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 43.5s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 43.7s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 43.8s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 44.0s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 44.1s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 44.3s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 44.4s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 44.6s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 44.7s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 45.0s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 45.3s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 45.5s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 45.6s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 45.8s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 45.9s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 46.1s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 46.2s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 46.4s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 46.7s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 46.8s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 47.0s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 47.1s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 47.4s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 47.6s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 47.7s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 47.9s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 48.0s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 48.2s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 48.3s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 48.6s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 48.8s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 48.9s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 49.1s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 49.2s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 49.4s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 49.5s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 49.7s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 50.0s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 50.1s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 50.3s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 50.6s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 50.7s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+aws_instance.ec2_bia_porteiro (remote-exec):  => [server internal] load build   0.1s
+[+] Building 50.9s (9/15)  docker:defaultc):  => => transferring dockerfi 564B  0.0s
+[+] Building 51.2s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 51.3s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 51.5s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 51.6s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 51.9s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 52.2s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 52.5s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 52.7s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 52.8s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 53.0s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 53.1s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 53.3s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 53.4s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 53.6s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 53.7s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 53.9s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 54.0s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 54.2s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 54.5s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 54.6s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 54.8s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 55.1s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 55.4s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 55.5s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 55.7s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 55.8s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 56.0s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 56.1s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 56.4s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 56.7s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 57.0s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 57.3s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 57.5s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 57.8s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 57.9s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 58.1s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 58.4s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 58.5s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 58.7s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 58.8s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 59.0s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 59.3s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 59.6s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 60.0s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 60.2s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 60.3s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 60.6s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 60.8s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 61.1s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 61.2s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 61.4s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 61.5s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 61.7s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 61.8s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 62.0s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 62.1s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 62.4s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 62.6s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 62.9s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 63.2s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 63.3s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 63.5s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 63.8s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 63.9s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 64.1s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 64.4s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 64.5s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 64.7s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 64.8s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 65.1s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 65.3s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 65.4s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 65.6s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 65.7s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 66.0s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 66.2s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 66.5s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 66.8s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 67.1s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 67.4s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 67.5s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 67.7s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 67.8s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 68.0s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 68.1s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 68.3s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 68.6s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 68.9s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 69.0s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 69.3s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 69.5s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 69.6s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 69.9s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 70.1s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 70.2s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 70.4s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 70.5s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 70.7s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 70.8s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 71.0s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 71.1s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 71.3s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 71.4s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 71.6s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 71.7s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 71.9s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 72.0s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 72.6s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 72.8s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 73.1s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 73.2s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 73.4s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 73.5s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 73.7s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 73.8s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 74.0s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 74.1s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 74.4s (9/15)  docker:defaultc):  => [server internal] load build   0.1s
+[+] Building 74.7s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 74.9s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 75.2s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 75.3s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 75.5s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 75.6s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 75.8s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 75.9s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 76.1s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 76.5s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 76.7s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 76.8s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 77.0s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 77.1s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 77.3s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 77.6s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 77.7s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 77.9s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 78.0s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 78.2s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 78.3s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 78.6s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 78.9s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 79.2s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 79.4s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 79.5s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 79.7s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 80.0s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 80.1s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 80.3s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 80.6s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 80.9s (11/15)  docker:default):  => [server internal] load build   0.1s
+aws_instance.ec2_bia_porteiro (remote-exec):  => [server internal] load build   0.1s
+[+] Building 81.0s (11/15)  docker:default):  => => transferring dockerfi 564B  0.0s
+[+] Building 81.2s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 81.3s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 81.5s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 81.6s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 82.0s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 82.1s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 82.4s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 82.7s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 83.0s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 83.2s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 83.3s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 83.5s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 83.6s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 83.9s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 84.1s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 84.2s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 84.4s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 84.5s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 84.7s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 85.0s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 85.3s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 85.4s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 85.6s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 85.7s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 85.9s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 86.0s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 86.2s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 86.5s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 86.6s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 86.9s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 87.2s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 87.4s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 87.5s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 87.7s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 87.8s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 88.0s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 88.1s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 88.3s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 88.6s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 88.7s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 88.9s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 89.0s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 89.2s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 89.3s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 89.5s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 89.8s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 89.9s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 90.2s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 90.5s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 90.8s (11/15)  docker:default):  => [server internal] load build   0.1s
+aws_instance.ec2_bia_porteiro (remote-exec):  => [server internal] load build   0.1s
+[+] Building 91.0s (11/15)  docker:default):  => => transferring dockerfi 564B  0.0s
+[+] Building 91.1s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 91.3s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 91.4s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 91.6s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 91.7s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 91.9s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 92.0s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 92.2s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 92.5s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 92.8s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 93.1s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 93.4s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 93.5s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 93.7s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 93.8s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 94.0s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 94.1s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 94.3s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 94.4s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 94.6s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 94.7s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 95.2s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 95.5s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 95.6s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 95.9s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 96.2s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 96.5s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 96.8s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 97.0s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 97.3s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 97.4s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 97.6s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 97.7s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 97.9s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 98.0s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 98.2s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 98.3s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 98.5s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 98.6s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 98.8s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 98.9s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 99.1s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 99.2s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 99.4s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 99.5s (11/15)  docker:default):  => [server internal] load build   0.1s
+[+] Building 100.0s (11/15)  docker:default:  => [server internal] load build   0.1s
+[+] Building 100.1s (11/15)  docker:default:  => [server internal] load build   0.1s
+[+] Building 100.4s (11/15)  docker:default:  => [server internal] load build   0.1s
+[+] Building 100.7s (11/15)  docker:default:  => [server internal] load build   0.1s
+aws_instance.ec2_bia_porteiro (remote-exec):  => [server internal] load build   0.1s
+[+] Building 101.0s (11/15)  docker:default:  => => transferring dockerfi 564B  0.0s
+[+] Building 101.2s (11/15)  docker:default:  => [server internal] load build   0.1s
+[+] Building 101.3s (11/15)  docker:default:  => [server internal] load build   0.1s
+[+] Building 101.5s (11/15)  docker:default:  => [server internal] load build   0.1s
+[+] Building 101.6s (11/15)  docker:default:  => [server internal] load build   0.1s
+[+] Building 101.8s (11/15)  docker:default:  => [server internal] load build   0.1s
+[+] Building 101.9s (11/15)  docker:default:  => [server internal] load build   0.1s
+[+] Building 102.1s (11/15)  docker:default:  => [server internal] load build   0.1s
+[+] Building 102.4s (11/15)  docker:default:  => [server internal] load build   0.1s
+[+] Building 102.7s (11/15)  docker:default:  => [server internal] load build   0.1s
+[+] Building 103.0s (11/15)  docker:default:  => [server internal] load build   0.1s
+[+] Building 103.3s (11/15)  docker:default:  => [server internal] load build   0.1s
+[+] Building 103.4s (11/15)  docker:default:  => [server internal] load build   0.1s
+[+] Building 103.6s (11/15)  docker:default:  => [server internal] load build   0.1s
+[+] Building 103.7s (11/15)  docker:default:  => [server internal] load build   0.1s
+[+] Building 103.9s (11/15)  docker:default:  => [server internal] load build   0.1s
+[+] Building 104.2s (11/15)  docker:default:  => [server internal] load build   0.1s
+[+] Building 104.3s (11/15)  docker:default:  => [server internal] load build   0.1s
+[+] Building 104.8s (11/15)  docker:default:  => [server internal] load build   0.1s
+[+] Building 104.9s (11/15)  docker:default:  => [server internal] load build   0.1s
+[+] Building 105.1s (11/15)  docker:default:  => [server internal] load build   0.1s
+[+] Building 105.4s (11/15)  docker:default:  => [server internal] load build   0.1s
+[+] Building 105.5s (11/15)  docker:default:  => [server internal] load build   0.1s
+[+] Building 105.7s (11/15)  docker:default:  => [server internal] load build   0.1s
+[+] Building 106.0s (11/15)  docker:default:  => [server internal] load build   0.1s
+[+] Building 106.1s (11/15)  docker:default:  => [server internal] load build   0.1s
+[+] Building 106.3s (11/15)  docker:default:  => [server internal] load build   0.1s
+[+] Building 106.5s (12/15)  docker:default:  => [server internal] load build   0.1s
+[+] Building 106.7s (12/15)  docker:default:  => [server internal] load build   0.1s
+[+] Building 106.8s (12/15)  docker:default:  => [server internal] load build   0.1s
+[+] Building 107.0s (12/15)  docker:default:  => [server internal] load build   0.1s
+[+] Building 107.3s (13/15)  docker:default:  => [server internal] load build   0.1s
+[+] Building 107.5s (13/15)  docker:default:  => [server internal] load build   0.1s
+[+] Building 107.7s (14/15)  docker:default:  => [server internal] load build   0.1s
+[+] Building 107.8s (14/15)  docker:default:  => [server internal] load build   0.1s
+[+] Building 108.0s (14/15)  docker:default:  => [server internal] load build   0.1s
+[+] Building 108.1s (14/15)  docker:default:  => [server internal] load build   0.1s
+[+] Building 108.3s (15/15)  docker:default:  => [server internal] load build   0.1s
+[+] Building 108.5s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 108.6s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 108.8s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 108.9s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 109.1s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 109.4s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 109.5s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 109.7s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 109.8s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 110.0s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 110.1s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 110.4s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 110.6s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 110.7s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 110.9s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 111.2s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 111.3s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 111.5s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 111.8s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 111.9s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 112.1s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 112.4s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 112.5s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 112.7s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 112.8s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 113.0s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 113.1s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 113.3s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 113.4s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 113.6s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 113.7s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 113.9s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 114.2s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 114.3s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 114.6s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 114.8s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 114.9s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 115.2s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 115.4s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 115.5s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 115.7s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 115.8s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 116.0s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 116.1s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 116.3s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 116.6s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 116.7s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 117.0s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 117.3s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 117.5s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 117.6s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 117.8s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 117.9s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 118.1s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 118.2s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 118.5s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 118.7s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 118.8s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 119.0s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 119.3s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 119.6s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 120.0s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 120.3s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 120.5s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 120.8s (15/16)  docker:default:  => [server internal] load build   0.1s
+aws_instance.ec2_bia_porteiro (remote-exec):  => [server internal] load build   0.1s
+[+] Building 120.9s (15/16)  docker:default:  => => transferring dockerfi 564B  0.0s
+[+] Building 121.2s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 121.4s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 121.5s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 121.7s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 121.8s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 122.0s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 122.1s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 122.4s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 122.6s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 122.7s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 123.0s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 123.2s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 123.3s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 123.5s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 123.8s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 123.9s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 124.1s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 124.4s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 124.5s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 124.7s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 124.8s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 125.1s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 125.3s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 125.6s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 125.7s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 125.9s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 126.0s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 126.3s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 126.6s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 126.9s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 127.2s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 127.4s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 127.5s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 127.7s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 127.8s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 128.0s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 128.1s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 128.3s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 128.6s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 128.7s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 128.9s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 129.2s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 129.3s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 129.5s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 129.6s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 129.8s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 129.9s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 130.2s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 130.4s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 130.5s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 130.7s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 130.8s (15/16)  docker:default:  => [server internal] load build   0.1s
+aws_instance.ec2_bia_porteiro (remote-exec):  => [server internal] load build   0.1s
+[+] Building 131.0s (15/16)  docker:default:  => => transferring dockerfi 564B  0.0s
+[+] Building 131.1s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 131.3s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 131.6s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 131.7s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 131.9s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 132.2s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 132.3s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 132.5s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 132.6s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 132.8s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 133.1s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 133.4s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 133.5s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 133.7s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 133.8s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 134.0s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 134.1s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 134.4s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 134.7s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 134.9s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 135.0s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 135.3s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 135.5s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 135.6s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 135.8s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 135.9s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 136.1s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 136.4s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 136.5s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 136.7s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 137.0s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 137.3s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 137.6s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 137.7s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 137.9s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 138.2s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 138.3s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 138.5s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 138.6s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 138.8s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 138.9s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 139.2s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 139.4s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 139.5s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 139.7s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 139.8s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 140.0s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 140.1s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 140.3s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 140.4s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 140.6s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 140.7s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 140.9s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 141.2s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 141.3s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 141.5s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 141.6s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 141.8s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 141.9s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 142.2s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 142.4s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 142.5s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 142.7s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 142.8s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 143.0s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 143.1s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 143.3s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 143.4s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 143.6s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 143.7s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 143.9s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 144.0s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 144.3s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 144.5s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 144.8s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 144.9s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 145.1s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 145.4s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 145.5s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 145.7s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 145.8s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 146.0s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 146.1s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 146.4s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 146.7s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 147.0s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 147.3s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 147.5s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 147.6s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 147.9s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 148.1s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 148.2s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 148.5s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 148.7s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 148.8s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 149.0s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 149.3s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 149.6s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 149.7s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 149.9s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 150.2s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 150.5s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 150.8s (15/16)  docker:default:  => [server internal] load build   0.1s
+aws_instance.ec2_bia_porteiro (remote-exec):  => [server internal] load build   0.1s
+[+] Building 150.9s (15/16)  docker:default:  => => transferring dockerfi 564B  0.0s
+[+] Building 151.2s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 151.4s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 151.5s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 151.7s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 151.8s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 152.0s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 152.1s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 152.4s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 152.7s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 153.0s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 153.2s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 153.3s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 153.5s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 153.8s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 153.9s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 154.1s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 154.4s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 154.7s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 154.8s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 155.1s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 155.3s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 155.4s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 155.6s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 155.7s (15/16)  docker:default:  => [server internal] load build   0.1s
+[+] Building 155.9s (16/16) FINISHED docker:defaulterver internal] load build   0.1s
+aws_instance.ec2_bia_porteiro (remote-exec):  => [server internal] load build   0.1s
+aws_instance.ec2_bia_porteiro (remote-exec):  => => transferring dockerfi 564B  0.0s
+aws_instance.ec2_bia_porteiro (remote-exec):  => [server internal] load metada  0.5s
+aws_instance.ec2_bia_porteiro (remote-exec):  => [server internal] load .docke  0.0s
+aws_instance.ec2_bia_porteiro (remote-exec):  => => transferring context: 2B    0.0s
+aws_instance.ec2_bia_porteiro (remote-exec):  => [server  1/11] FROM public.ec  5.4s
+aws_instance.ec2_bia_porteiro (remote-exec):  => => resolve public.ecr.aws/doc  0.0s
+aws_instance.ec2_bia_porteiro (remote-exec):  => => sha256:965 1.71MB / 1.71MB  0.3s
+aws_instance.ec2_bia_porteiro (remote-exec):  => => sha256:6bb 6.49kB / 6.49kB  0.0s
+aws_instance.ec2_bia_porteiro (remote-exec):  => => sha256:7a6 1.93kB / 1.93kB  0.0s
+aws_instance.ec2_bia_porteiro (remote-exec):  => => sha256:7b7 6.54kB / 6.54kB  0.0s
+aws_instance.ec2_bia_porteiro (remote-exec):  => => sha256:afa 3.31kB / 3.31kB  0.1s
+aws_instance.ec2_bia_porteiro (remote-exec):  => => sha256:ffc500e 448B / 448B  0.4s
+aws_instance.ec2_bia_porteiro (remote-exec):  => => extracting sha256:7cf63256  1.8s
+aws_instance.ec2_bia_porteiro (remote-exec):  => => extracting sha256:afa0b3a9  0.0s
+aws_instance.ec2_bia_porteiro (remote-exec):  => => extracting sha256:279386e9  2.5s
+aws_instance.ec2_bia_porteiro (remote-exec):  => => extracting sha256:965993a6  0.1s
+aws_instance.ec2_bia_porteiro (remote-exec):  => => extracting sha256:ffc500ec  0.0s
+aws_instance.ec2_bia_porteiro (remote-exec):  => [server internal] load build   0.3s
+aws_instance.ec2_bia_porteiro (remote-exec):  => => transferring contex 7.53MB  0.3s
+aws_instance.ec2_bia_porteiro (remote-exec):  => [server  2/11] RUN npm insta  14.8s
+aws_instance.ec2_bia_porteiro (remote-exec):  => [server  3/11] RUN apt-get u  10.7s
+aws_instance.ec2_bia_porteiro (remote-exec):  => [server  4/11] WORKDIR /usr/s  0.1s
+aws_instance.ec2_bia_porteiro (remote-exec):  => [server  5/11] COPY package*.  0.1s
+aws_instance.ec2_bia_porteiro (remote-exec):  => [server  6/11] RUN npm insta  42.8s
+aws_instance.ec2_bia_porteiro (remote-exec):  => [server  7/11] COPY . .        0.2s
+aws_instance.ec2_bia_porteiro (remote-exec):  => [server  8/11] RUN NODE_OPTI  31.8s
+aws_instance.ec2_bia_porteiro (remote-exec):  => [server  9/11] RUN mv client/  0.6s
+aws_instance.ec2_bia_porteiro (remote-exec):  => [server 10/11] RUN rm  -rf cl  0.5s
+aws_instance.ec2_bia_porteiro (remote-exec):  => [server 11/11] RUN mv build c  0.6s
+aws_instance.ec2_bia_porteiro (remote-exec):  => [server] exporting to image   47.5s
+aws_instance.ec2_bia_porteiro (remote-exec):  => => exporting layers           47.5s
+aws_instance.ec2_bia_porteiro (remote-exec):  => => writing image sha256:bc365  0.0s
+aws_instance.ec2_bia_porteiro (remote-exec):  => => naming to docker.io/librar  0.0s
+[+] Running 4/42_bia_porteiro (remote-exec): 
+[+] Running 4/42_bia_porteiro (remote-exec):  ✔ Network bia_default  Created    0.2s 
+[+] Running 4/42_bia_porteiro (remote-exec):  ✔ Network bia_default  Created    0.2s 
+[+] Running 4/42_bia_porteiro (remote-exec):  ✔ Network bia_default  Created    0.2s 
+[+] Running 4/42_bia_porteiro (remote-exec):  ✔ Network bia_default  Created    0.2s 
+aws_instance.ec2_bia_porteiro (remote-exec):  ✔ Network bia_default  Created    0.2s 
+aws_instance.ec2_bia_porteiro (remote-exec):  ✔ Volume "bia_db"      Created    0.0s 
+aws_instance.ec2_bia_porteiro (remote-exec):  ✔ Container database   Started    0.1s 
+aws_instance.ec2_bia_porteiro (remote-exec):  ✔ Container bia        Started    0.1s 
+aws_instance.ec2_bia_porteiro (remote-exec): 
+aws_instance.ec2_bia_porteiro: Still creating... [6m30s elapsed]
+aws_instance.ec2_bia_porteiro: Still creating... [6m40s elapsed]
+
+
+aws_instance.ec2_bia_porteiro (remote-exec): Sequelize CLI [Node: 22.14.0, CLI: 6.6.2, ORM: 6.37.0]
+
+aws_instance.ec2_bia_porteiro (remote-exec): Loaded configuration file "config/database.js".
+aws_instance.ec2_bia_porteiro (remote-exec): == 20210924000838-criar-tarefas: migrating =======
+aws_instance.ec2_bia_porteiro (remote-exec): == 20210924000838-criar-tarefas: migrated (0.025s)
+
+
+aws_instance.ec2_bia_porteiro: Creation complete after 6m46s [id=i-066cd73b208a718f2]
+
+Apply complete! Resources: 2 added, 0 changed, 0 destroyed.
+
+Outputs:
+
+EC2_bia_dev_sg_ids = toset([
+  "sg-0f51bac115b52ee34",
+])
+ami_amazon = {
+  "architecture" = "x86_64"
+  "arn" = "arn:aws:ec2:us-east-1::image/ami-01f5a0b78d6089704"
+  "block_device_mappings" = toset([
+    {
+      "device_name" = "/dev/xvda"
+      "ebs" = tomap({
+        "delete_on_termination" = "true"
+        "encrypted" = "false"
+        "iops" = "0"
+        "snapshot_id" = "snap-0d7e5f888fca4aaa6"
+        "throughput" = "0"
+        "volume_size" = "8"
+        "volume_type" = "gp2"
+      })
+      "no_device" = ""
+      "virtual_name" = ""
+    },
+  ])
+  "boot_mode" = ""
+  "creation_date" = "2025-03-05T01:36:07.000Z"
+  "deprecation_time" = "2025-07-01T00:00:00.000Z"
+  "description" = "Amazon Linux 2 AMI 2.0.20250305.0 x86_64 HVM gp2"
+  "ena_support" = true
+  "executable_users" = tolist(null) /* of string */
+  "filter" = toset([
+    {
+      "name" = "name"
+      "values" = toset([
+        "amzn2-ami-hvm-*-x86_64-gp2",
+      ])
+    },
+    {
+      "name" = "virtualization-type"
+      "values" = toset([
+        "hvm",
+      ])
+    },
+  ])
+  "hypervisor" = "xen"
+  "id" = "ami-01f5a0b78d6089704"
+  "image_id" = "ami-01f5a0b78d6089704"
+  "image_location" = "amazon/amzn2-ami-hvm-2.0.20250305.0-x86_64-gp2"
+  "image_owner_alias" = "amazon"
+  "image_type" = "machine"
+  "imds_support" = ""
+  "include_deprecated" = false
+  "kernel_id" = ""
+  "most_recent" = true
+  "name" = "amzn2-ami-hvm-2.0.20250305.0-x86_64-gp2"
+  "name_regex" = tostring(null)
+  "owner_id" = "137112412989"
+  "owners" = tolist([
+    "amazon",
+  ])
+  "platform" = ""
+  "platform_details" = "Linux/UNIX"
+  "product_codes" = toset([])
+  "public" = true
+  "ramdisk_id" = ""
+  "root_device_name" = "/dev/xvda"
+  "root_device_type" = "ebs"
+  "root_snapshot_id" = "snap-0d7e5f888fca4aaa6"
+  "sriov_net_support" = "simple"
+  "state" = "available"
+  "state_reason" = tomap({
+    "code" = "UNSET"
+    "message" = "UNSET"
+  })
+  "tags" = tomap({})
+  "timeouts" = null /* object */
+  "tpm_support" = ""
+  "usage_operation" = "RunInstances"
+  "virtualization_type" = "hvm"
+}
+ami_ubuntu = {
+  "architecture" = "x86_64"
+  "arn" = "arn:aws:ec2:us-east-1::image/ami-084568db4383264d4"
+  "block_device_mappings" = toset([
+    {
+      "device_name" = "/dev/sda1"
+      "ebs" = tomap({
+        "delete_on_termination" = "true"
+        "encrypted" = "false"
+        "iops" = "0"
+        "snapshot_id" = "snap-0edbe0f6601b2861c"
+        "throughput" = "0"
+        "volume_size" = "8"
+        "volume_type" = "gp3"
+      })
+      "no_device" = ""
+      "virtual_name" = ""
+    },
+    {
+      "device_name" = "/dev/sdb"
+      "ebs" = tomap({})
+      "no_device" = ""
+      "virtual_name" = "ephemeral0"
+    },
+    {
+      "device_name" = "/dev/sdc"
+      "ebs" = tomap({})
+      "no_device" = ""
+      "virtual_name" = "ephemeral1"
+    },
+  ])
+  "boot_mode" = "uefi-preferred"
+  "creation_date" = "2025-03-05T09:18:37.000Z"
+  "deprecation_time" = "2027-03-05T09:18:37.000Z"
+  "description" = "Canonical, Ubuntu, 24.04, amd64 noble image"
+  "ena_support" = true
+  "executable_users" = tolist(null) /* of string */
+  "filter" = toset([
+    {
+      "name" = "name"
+      "values" = toset([
+        "ubuntu/images/hvm-ssd-gp3/ubuntu-noble-24.04-amd64-server-*",
+      ])
+    },
+    {
+      "name" = "virtualization-type"
+      "values" = toset([
+        "hvm",
+      ])
+    },
+  ])
+  "hypervisor" = "xen"
+  "id" = "ami-084568db4383264d4"
+  "image_id" = "ami-084568db4383264d4"
+  "image_location" = "amazon/ubuntu/images/hvm-ssd-gp3/ubuntu-noble-24.04-amd64-server-20250305"
+  "image_owner_alias" = "amazon"
+  "image_type" = "machine"
+  "imds_support" = "v2.0"
+  "include_deprecated" = false
+  "kernel_id" = ""
+  "most_recent" = true
+  "name" = "ubuntu/images/hvm-ssd-gp3/ubuntu-noble-24.04-amd64-server-20250305"
+  "name_regex" = tostring(null)
+  "owner_id" = "099720109477"
+  "owners" = tolist([
+    "099720109477",
+  ])
+  "platform" = ""
+  "platform_details" = "Linux/UNIX"
+  "product_codes" = toset([])
+  "public" = true
+  "ramdisk_id" = ""
+  "root_device_name" = "/dev/sda1"
+  "root_device_type" = "ebs"
+  "root_snapshot_id" = "snap-0edbe0f6601b2861c"
+  "sriov_net_support" = "simple"
+  "state" = "available"
+  "state_reason" = tomap({
+    "code" = "UNSET"
+    "message" = "UNSET"
+  })
+  "tags" = tomap({})
+  "timeouts" = null /* object */
+  "tpm_support" = ""
+  "usage_operation" = "RunInstances"
+  "virtualization_type" = "hvm"
+}
+ami_ubuntu_2204 = {
+  "architecture" = "x86_64"
+  "arn" = "arn:aws:ec2:us-east-1::image/ami-0f9de6e2d2f067fca"
+  "block_device_mappings" = toset([
+    {
+      "device_name" = "/dev/sda1"
+      "ebs" = tomap({
+        "delete_on_termination" = "true"
+        "encrypted" = "false"
+        "iops" = "0"
+        "snapshot_id" = "snap-0706476dde26d8e82"
+        "throughput" = "0"
+        "volume_size" = "8"
+        "volume_type" = "gp2"
+      })
+      "no_device" = ""
+      "virtual_name" = ""
+    },
+    {
+      "device_name" = "/dev/sdb"
+      "ebs" = tomap({})
+      "no_device" = ""
+      "virtual_name" = "ephemeral0"
+    },
+    {
+      "device_name" = "/dev/sdc"
+      "ebs" = tomap({})
+      "no_device" = ""
+      "virtual_name" = "ephemeral1"
+    },
+  ])
+  "boot_mode" = "uefi-preferred"
+  "creation_date" = "2025-03-05T03:14:49.000Z"
+  "deprecation_time" = "2027-03-05T03:14:49.000Z"
+  "description" = "Canonical, Ubuntu, 22.04, amd64 jammy image"
+  "ena_support" = true
+  "executable_users" = tolist(null) /* of string */
+  "filter" = toset([
+    {
+      "name" = "name"
+      "values" = toset([
+        "ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-amd64-server-*",
+      ])
+    },
+    {
+      "name" = "virtualization-type"
+      "values" = toset([
+        "hvm",
+      ])
+    },
+  ])
+  "hypervisor" = "xen"
+  "id" = "ami-0f9de6e2d2f067fca"
+  "image_id" = "ami-0f9de6e2d2f067fca"
+  "image_location" = "amazon/ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-amd64-server-20250305"
+  "image_owner_alias" = "amazon"
+  "image_type" = "machine"
+  "imds_support" = ""
+  "include_deprecated" = false
+  "kernel_id" = ""
+  "most_recent" = true
+  "name" = "ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-amd64-server-20250305"
+  "name_regex" = tostring(null)
+  "owner_id" = "099720109477"
+  "owners" = tolist([
+    "099720109477",
+  ])
+  "platform" = ""
+  "platform_details" = "Linux/UNIX"
+  "product_codes" = toset([])
+  "public" = true
+  "ramdisk_id" = ""
+  "root_device_name" = "/dev/sda1"
+  "root_device_type" = "ebs"
+  "root_snapshot_id" = "snap-0706476dde26d8e82"
+  "sriov_net_support" = "simple"
+  "state" = "available"
+  "state_reason" = tomap({
+    "code" = "UNSET"
+    "message" = "UNSET"
+  })
+  "tags" = tomap({})
+  "timeouts" = null /* object */
+  "tpm_support" = ""
+  "usage_operation" = "RunInstances"
+  "virtualization_type" = "hvm"
+}
+autor = "Junior Fernandes"
+cliente = "BIA"
+id_instancia = "i-066cd73b208a718f2"
+private_ip = "10.20.101.40"
+projeto = "Formacao AWS"
+public_ip = "54.198.143.182"
+regiao = "us-east-1"
+shortnameid = "bia"
+/home/junior/Dados/FormacaoAWS/Terraform/4-Bucket
+Success! The configuration is valid.
+
+data.terraform_remote_state.vpc: Reading...
+data.terraform_remote_state.sg: Reading...
+aws_s3_bucket.s3_bia_static: Refreshing state... [id=crfjunior-bia-static]
+data.terraform_remote_state.sg: Read complete after 2s
+data.terraform_remote_state.vpc: Read complete after 2s
+aws_s3_bucket_policy.public_access: Refreshing state... [id=crfjunior-bia-static]
+aws_s3_bucket_public_access_block.s3_bia_static: Refreshing state... [id=crfjunior-bia-static]
+aws_s3_bucket_website_configuration.s3_bia_static: Refreshing state... [id=crfjunior-bia-static]
+
+No changes. Your infrastructure matches the configuration.
+
+Terraform has compared your real infrastructure against your configuration and found no differences, so no changes are needed.
+/home/junior/Dados/FormacaoAWS/Terraform/5-ECR
+Success! The configuration is valid.
+
+aws_ecr_repository.repository-bia: Creating...
+aws_ecr_repository.repository-bia: Creation complete after 1s [id=bia]
+
+Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
+
+Outputs:
+
+ecr_repository_arn = "arn:aws:ecr:us-east-1:390403858393:repository/bia"
+ecr_repository_id = "bia"
+ecr_repository_name = "bia"
+ecr_repository_registry_id = "390403858393"
+ecr_repository_tags_all = tomap({})
+ecr_repository_url = "390403858393.dkr.ecr.us-east-1.amazonaws.com/bia"
