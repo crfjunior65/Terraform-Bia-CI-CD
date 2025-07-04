@@ -21,6 +21,17 @@ Fornecer a infraestrutura fundamental necessária para:
 ├── 4a-S3/ # Armazenamento de objetos
 └── modules/ # Módulos reutilizáveis
 
+✅ Pontos Fortes
+Estrutura bem organizada com separação clara de responsabilidades
+
+CI/CD implementado com GitHub Actions e pre-commit hooks
+
+Remote State configurado com S3
+
+Módulos reutilizáveis do Terraform Registry
+
+Documentação automatizada com terraform-docs
+
 
 ## 📋 Pré-requisitos
 

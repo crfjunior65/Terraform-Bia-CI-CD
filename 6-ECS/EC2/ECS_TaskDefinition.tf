@@ -101,7 +101,7 @@ resource "aws_ecs_task_definition" "ecs_task_definition" {
     image     = "023770199924.dkr.ecr.us-east-1.amazonaws.com/bia:latest", # image URL of the application image
     cpu       = 1024,                                                      # equivale a 1 vCPU - QUANTIDADE DE CPU A SER ALOCADA PARA A ECS
     memory    = 256,                                                       # 256 MiB = 0.25 GiB
-    essencial = true,                                                      # a execução do container é essencial para a tarefa
+    essential = true,                                                      # a execução do container é essencial para a tarefa
     portMappings = [{
       containerPort = 80,
       hostPort      = 8080,
@@ -116,9 +116,9 @@ resource "aws_ecs_task_definition" "ecs_task_definition" {
     logConfiguration = {
       logDriver = "awslogs",
       options = {
-        awslogs-group         = "bia",
-        awslogs-region        = "us-east-1",
-        awslogs-stream-prefix = "webapp"
+        "awslogs-group"         = aws_cloudwatch_log_group.log-group.name,
+        "awslogs-region"        = "us-east-1",
+        "awslogs-stream-prefix" = "webapp"
       }
     }
   }])

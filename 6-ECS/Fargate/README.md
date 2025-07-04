@@ -12,6 +12,7 @@
 
 | Name | Version |
 |------|---------|
+| <a name="provider_aws"></a> [aws](#provider\_aws) | 5.22.0 |
 | <a name="provider_terraform"></a> [terraform](#provider\_terraform) | n/a |
 
 ## Modules
@@ -22,6 +23,13 @@ No modules.
 
 | Name | Type |
 |------|------|
+| [aws_cloudwatch_log_group.fargate_log_group](https://registry.terraform.io/providers/hashicorp/aws/5.22.0/docs/resources/cloudwatch_log_group) | resource |
+| [aws_ecs_cluster.fargate_cluster](https://registry.terraform.io/providers/hashicorp/aws/5.22.0/docs/resources/ecs_cluster) | resource |
+| [aws_ecs_service.fargate_service](https://registry.terraform.io/providers/hashicorp/aws/5.22.0/docs/resources/ecs_service) | resource |
+| [aws_ecs_task_definition.fargate_task](https://registry.terraform.io/providers/hashicorp/aws/5.22.0/docs/resources/ecs_task_definition) | resource |
+| [aws_iam_role.fargate_task_execution_role](https://registry.terraform.io/providers/hashicorp/aws/5.22.0/docs/resources/iam_role) | resource |
+| [aws_iam_role_policy_attachment.fargate_task_execution_policy](https://registry.terraform.io/providers/hashicorp/aws/5.22.0/docs/resources/iam_role_policy_attachment) | resource |
+| [aws_security_group.fargate_sg](https://registry.terraform.io/providers/hashicorp/aws/5.22.0/docs/resources/security_group) | resource |
 | [terraform_remote_state.ecr](https://registry.terraform.io/providers/hashicorp/terraform/latest/docs/data-sources/remote_state) | data source |
 | [terraform_remote_state.efs](https://registry.terraform.io/providers/hashicorp/terraform/latest/docs/data-sources/remote_state) | data source |
 | [terraform_remote_state.orquestrador](https://registry.terraform.io/providers/hashicorp/terraform/latest/docs/data-sources/remote_state) | data source |
@@ -47,5 +55,10 @@ No modules.
 
 ## Outputs
 
-No outputs.
+| Name | Description |
+|------|-------------|
+| <a name="output_fargate_cluster_arn"></a> [fargate\_cluster\_arn](#output\_fargate\_cluster\_arn) | ARN do cluster ECS Fargate |
+| <a name="output_fargate_cluster_name"></a> [fargate\_cluster\_name](#output\_fargate\_cluster\_name) | Nome do cluster ECS Fargate |
+| <a name="output_fargate_service_name"></a> [fargate\_service\_name](#output\_fargate\_service\_name) | Nome do serviço ECS Fargate |
+| <a name="output_fargate_task_definition_arn"></a> [fargate\_task\_definition\_arn](#output\_fargate\_task\_definition\_arn) | ARN da task definition |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->

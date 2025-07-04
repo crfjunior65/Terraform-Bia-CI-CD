@@ -28,12 +28,4 @@ resource "aws_ecs_capacity_provider" "test" {
 }
 */
 
-resource "aws_ecs_cluster_capacity_providers" "example" {
-  cluster_name       = aws_ecs_cluster.ecs_cluster.name # aws_ecs_cluster.ecs_cluster.name
-  capacity_providers = [aws_ecs_capacity_provider.ecs_capacity_provider.name]
-  default_capacity_provider_strategy {
-    base              = 1
-    weight            = 100
-    capacity_provider = aws_ecs_capacity_provider.ecs_capacity_provider.name
-  }
-}
+# Removido - duplicado com bia_capacity_providers em Ecs_Cluster.tf

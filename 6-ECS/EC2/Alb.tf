@@ -7,11 +7,11 @@ resource "aws_lb" "ecs_alb" {
   security_groups    = [data.terraform_remote_state.sg.outputs.sg_bia_web]
   subnets            = data.terraform_remote_state.vpc.outputs.vpc_public_subnets_id
 
-  access_logs {
-    bucket  = "nome-do-seu-bucket-de-logs" # Substitua pelo nome do seu bucket S3
-    prefix  = "alb-logs"
-    enabled = true
-  }
+  # access_logs {
+  #   bucket  = "nome-do-seu-bucket-de-logs" # Substitua pelo nome do seu bucket S3
+  #   prefix  = "alb-logs"
+  #   enabled = false
+  # }
 
   tags = {
     Name = "ecs-alb"

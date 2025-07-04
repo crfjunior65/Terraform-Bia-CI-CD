@@ -5,7 +5,7 @@ resource "aws_launch_template" "ec2_lt" {
 
   instance_type = "t3.micro"
 
-  key_name = "aws-key-terraform"
+  key_name = var.key_name
   vpc_security_group_ids = [data.terraform_remote_state.sg.outputs.sg_bia_web,
   data.terraform_remote_state.sg.outputs.sg_bia_db]
   #[aws_security_group.security_group.id]

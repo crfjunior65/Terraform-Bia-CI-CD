@@ -29,7 +29,6 @@ No modules.
 | [aws_ecs_capacity_provider.ecs_capacity_provider](https://registry.terraform.io/providers/hashicorp/aws/5.22.0/docs/resources/ecs_capacity_provider) | resource |
 | [aws_ecs_cluster.ecs_cluster](https://registry.terraform.io/providers/hashicorp/aws/5.22.0/docs/resources/ecs_cluster) | resource |
 | [aws_ecs_cluster_capacity_providers.bia_capacity_providers](https://registry.terraform.io/providers/hashicorp/aws/5.22.0/docs/resources/ecs_cluster_capacity_providers) | resource |
-| [aws_ecs_cluster_capacity_providers.example](https://registry.terraform.io/providers/hashicorp/aws/5.22.0/docs/resources/ecs_cluster_capacity_providers) | resource |
 | [aws_ecs_service.ecs_service](https://registry.terraform.io/providers/hashicorp/aws/5.22.0/docs/resources/ecs_service) | resource |
 | [aws_ecs_task_definition.ecs_task_definition](https://registry.terraform.io/providers/hashicorp/aws/5.22.0/docs/resources/ecs_task_definition) | resource |
 | [aws_iam_role.ecs_task_execution_role](https://registry.terraform.io/providers/hashicorp/aws/5.22.0/docs/resources/iam_role) | resource |
@@ -64,5 +63,11 @@ No modules.
 
 ## Outputs
 
-No outputs.
+| Name | Description |
+|------|-------------|
+| <a name="output_alb_dns_name"></a> [alb\_dns\_name](#output\_alb\_dns\_name) | DNS name do Application Load Balancer |
+| <a name="output_alb_zone_id"></a> [alb\_zone\_id](#output\_alb\_zone\_id) | Zone ID do Application Load Balancer |
+| <a name="output_ecs_cluster_arn"></a> [ecs\_cluster\_arn](#output\_ecs\_cluster\_arn) | ARN do cluster ECS |
+| <a name="output_ecs_cluster_name"></a> [ecs\_cluster\_name](#output\_ecs\_cluster\_name) | Nome do cluster ECS |
+| <a name="output_ecs_service_name"></a> [ecs\_service\_name](#output\_ecs\_service\_name) | Nome do serviço ECS |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
