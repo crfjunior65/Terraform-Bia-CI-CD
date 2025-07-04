@@ -14,6 +14,7 @@ override.tf.json
 *_override.tf
 *_override.tf.json
 .terraform.lock.hcl
+.pre-*
 
 # === Diretórios de build CI/CD ===
 build/
