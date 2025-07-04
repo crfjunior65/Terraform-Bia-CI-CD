@@ -7,7 +7,7 @@ resource "random_password" "db_master_password" {
 }
 
 resource "aws_secretsmanager_secret" "db_password_secret" {
-  name        = "${var.environment}-rds-master-password-072024"
+  name        = "${var.environment}-rds-master-password"
   description = "Master password for the ${var.environment} RDS database."
   # Força a exclusão imediata do secret, evitando o erro "scheduled for deletion".
   recovery_window_in_days = 0
