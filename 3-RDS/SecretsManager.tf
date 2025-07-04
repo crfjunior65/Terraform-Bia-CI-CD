@@ -1,12 +1,16 @@
 resource "random_password" "db_master_password" {
-  length           = 16
-  special          = true
-  override_special = "_%@"
+  length  = 16
+  special = true
+  # A AWS não permite os caracteres especiais: /@" '
+  # O override_special garante que apenas caracteres válidos sejam usados.
+  override_special = "!#$%&*()-_=+[]{}<>:?"
 }
 
 resource "aws_secretsmanager_secret" "db_password_secret" {
-  name        = "${var.environment}-rds-master-password"
+  name        = "${var.environment}-rds-master-password-072024"
   description = "Master password for the ${var.environment} RDS database."
+  # Força a exclusão imediata do secret, evitando o erro "scheduled for deletion".
+  recovery_window_in_days = 0
   tags = {
     "Environment" = "Projeto_${var.environment}"
     "Management"  = "Terraform"

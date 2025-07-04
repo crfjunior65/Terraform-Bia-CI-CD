@@ -12,7 +12,7 @@ resource "aws_db_instance" "db-Projeto" {
   #parameter_group_name = "default.mysql8.0"
   skip_final_snapshot = true
   #5432 PostGres
-  #depends_on = [module.vpc]
+  depends_on = [aws_secretsmanager_secret.db_password_secret]
   #Selecionar VPC
 
   #vpc_id      = data.terraform_remote_state.vpc.outputs.vpc_id
