@@ -68,6 +68,7 @@ Este projeto está licenciado sob a licença MIT - veja o arquivo LICENSE para d
     Comunidade DevOps
 
 Pre-Commit OK
+
 ❯ git commit -m "Go: Execucao Terraform"
 trim trailing whitespace.................................................Passed
 fix end of files.........................................................Passed
