@@ -66,4 +66,15 @@ Este projeto está licenciado sob a licença MIT - veja o arquivo LICENSE para d
     Mentores dos Labs 2.0
 
     Comunidade DevOps
+
+Pre-Commit OK
+❯ git commit -m "Go: Execucao Terraform"
+trim trailing whitespace.................................................Passed
+fix end of files.........................................................Passed
+Terraform fmt............................................................Passed
+Terraform validate.......................................................Passed
+Terraform docs...........................................................Passed
+[main bc40976] Go: Execucao Terraform
+ 12 files changed, 35 insertions(+), 65 deletions(-)
+
 <!-- END_TF_DOCS -->
