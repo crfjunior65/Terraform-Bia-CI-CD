@@ -1,0 +1,40 @@
+name: 'Terraform CI'
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  terraform-ci:
+    name: 'Terraform CI Checks'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 'Checkout'
+        uses: actions/checkout@v4
+
+      - name: 'Setup Terraform'
+        uses: hashicorp/setup-terraform@v3
+
+      - name: 'Terraform Format Check'
+        run: terraform fmt -check -recursive
+
+      - name: 'Terraform Init All Modules'
+        run: |
+          for dir in $(find . -type f -name '*.tf' -exec dirname {} \; | sort -u); do
+            if [ -f "$dir/backend.tf" ] || [ "$dir" == "./1-VPC" ]; then # Heurística para identificar módulos raiz
+              echo "--- Initializing in $dir ---"
+              (cd $dir && terraform init -backend=false)
+            fi
+          done
+
+      - name: 'Terraform Validate All Modules'
+        run: |
+          for dir in $(find . -type f -name '*.tf' -exec dirname {} \; | sort -u); do
+            if [ -f "$dir/backend.tf" ] || [ "$dir" == "./1-VPC" ]; then
+              echo "--- Validating in $dir ---"
+              (cd $dir && terraform validate)
+            fi
+          done

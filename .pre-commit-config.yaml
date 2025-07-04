@@ -35,7 +35,7 @@ repos:
           - --hook-config=--path-to-file=README.md # Nome do arquivo de documentação
           - --hook-config=--add-to-existing-file=true # Adiciona ao arquivo existente
           - --hook-config=--create-file-if-not-exist=true # Cria o arquivo se não existir
-          - --args=--sort-by-required # Argumento para ordenar variáveis
+          - --args=--sort-by=required # Argumento para ordenar variáveis
 
   - repo: https://github.com/bridgecrewio/checkov.git
     rev: 3.2.120
